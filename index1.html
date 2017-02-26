@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <link href='css/style.css' rel='stylesheet'/>
+    <link href='jstree/dist/themes/default/style.min.css' rel="stylesheet"/>
+    <style>
+
+        .jstree-default .jstree-node { /*去除缩进*/
+             margin-left: 0px;
+        !important;
+        }
+
+        .jstree-default .jstree-themeicon {  /*去除文件夹图标*/
+            background-position: 49px -1px;
+
+        }
+
+        #modulemanagetree ul li{
+            background: url("images/left_munebg02.jpg");
+        !important;
+        }
+
+        .jstree-default .jstree-wholerow-clicked {
+            background: #48c969;
+            background: -webkit-linear-gradient(top,#48c969 0,#48c969 100%);
+            background: linear-gradient(to bottom, #48c969 0, #0ea346 100%);
+        !important;
+        }
+
+        .jstree-default .jstree-wholerow-hovered {
+            background: url("images/left_munebg.jpg") repeat-x;
+            font-weight: bold;
+        !important;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <div class="logo"><img src="images/logo.png"/></div>
+    <div class="mune" id="nav">
+        <ul>
+            <li><a href="#">首　页</a></li>
+            <li><a href="#" onclick="modulemanager()">模块管理</a>
+
+            </li>
+            <li><a href="#">档案管理</a></li>
+            <li><a href="#">系统维护</a></li>
+        </ul>
+    </div>
+
+</div>
+<div class="main">
+    <div class="left" id="leftnavgator"  >
+        <p>模块管理<a href="#"></a></p>
+
+        <div class="mune_l">
+            <div id="modulemanagetree" class="tree-demo">
+            </div>
+
+
+
+            <div class="right">
+                <div class="tz_gonggao"><a href="#">通知公告通知公告通知公告通知公告通知公告通知公告</a><a href="#" class="guanbi"></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/ziliao.js"></script>
+<script type="text/javascript" src="js/jquery.tabslet.min.js"></script>
+<script type="text/javascript" src="js/initializers.js"></script>
+<script  type="text/javascript" src="jstree/dist/jstree.js"></script>
+
+<script>
+
+    function modulemanager(){
+        console.log("触发模块管理按钮");
+
+//        $('#alertTree').modal({
+//            keyboard: false,
+//            show: true
+//        });
+
+        function init(){
+            console.log("111");
+           /* var ajaxTreeSample = function () {
+                var tree = $("#modulemanagetree");
+                tree.jstree("uncheck_all");
+                tree.jstree({
+                    'plugins' : [ "checkbox" ], //出现选择框
+                    'checkbox': { cascade: "", three_state: false }, //级联
+                    "core": {
+                      //  "multiple": treeMultiple, // 允许多选
+                        'expand_selected_onload': true, //选中项蓝色底显示
+                        'tie_selection':false,
+                        "themes": {
+                            "responsive": false
+                        },
+                        "check_callback": true,
+
+                        data : [
+                            { "id" : "1", "parent" : "#", "text" : "root" },
+                            { "id" : "2", "parent" : "1", "text" : "child 1" },
+                            { "id" : "3", "parent" : "1", "text" : "child 2" }
+                        ]
+
+                        /!*'data': {
+                            'url': jQuery.getBasePath() + '/group/listOrgsByUser.do',
+                            'data': function (node) {
+                                return {
+                                    'parentId': node.id === '#' ? "-1" : node.id
+                                };
+                            }
+                        },*!/
+                    }
+                });*/
+
+            $('#modulemanagetree').jstree({
+                core : {
+                    'expand_selected_onload': true, //选中项蓝色底显示
+                    'tie_selection':false,
+                    "themes": {
+                        "responsive": false
+                    },
+                    check_callback : true,
+
+            data : [
+                        { "id" : "1", "parent" : "#", "text" : "root" },
+//                        { "id" : "11", "parent" : "#", "text" : "chenqi" ,"children":true },
+                        { "id" : "2", "parent" : "1", "text" : "child 1" ,  a_attr  : {'href':'www.baidu.com'}   },
+                        { "id" : "3", "parent" : "1", "text" : "child 2" ,li_attr     : {'href':'www.tobao.com'}  },
+                        { "id" : "31", "parent" : "2", "text" : "child 3" },
+                        { "id" : "32", "parent" : "2", "text" : "child 4" },
+                        { "id" : "33", "parent" : "#", "text" : "child 5" },
+                        { "id" : "34", "parent" : "2", "text" : "child 5" },
+                        { "id" : "35", "parent" : "3", "text" : "child 5" },
+                        { "id" : "36", "parent" : "3", "text" : "child 7" },
+                        { "id" : "37", "parent" : "3", "text" : "child 8" },
+                        { "id" : "38", "parent" : "3", "text" : "child 88" },
+                        { "id" : "39", "parent" : "3", "text" : "child 77" },
+                        { "id" : "13", "parent" : "3", "text" : "child 24" },
+                        { "id" : "23", "parent" : "2", "text" : "child 26" },
+                    ]
+                },
+                plugins : ["wholerow","contextmenu","themes"],//指定使用哪些插件
+                "contextmenu": {
+                    "items": {
+                        "create": null,
+                        "rename": null,
+                        "remove": null,
+                        "ccp": null,
+                        "add": {
+                            "label": "add",
+                            "action": function (obj) {
+                                var inst = jQuery.jstree.reference(obj.reference);
+                                var clickedNode = inst.get_node(obj.reference);
+                                alert("add operation--clickedNode's id is:" + clickedNode.id);
+                            }
+                        },
+                        "delete": {
+                            "label": "delete",
+                            "action": function (obj) {
+                                var inst = jQuery.jstree.reference(obj.reference);
+                                var clickedNode = inst.get_node(obj.reference);
+                                alert("delete operation--clickedNode's id is:" + clickedNode.id);
+                            }
+                        }
+                    }
+                },
+                themes:{        //themes插件设置
+                    theme : "default", //设置theme主题，默认是"default"，可选值：default、apple、classic、default-rtl
+                    url : false,        //设置theme css文件的路径
+                    dots : true,        //是否显示虚线点
+                    icons : true    //是否显示节点前的图标，$("a > ins.jstree-icon")
+                }
+            }).on("ready.jstree", function (e, data) {
+                data.instance.close_all();
+            });
+            /*
+             * .bind("clicked.jstree", function (event) {
+             var eventNodeName = event.target.nodeName;
+             if (eventNodeName == 'INS') {
+             return;
+             } else if (eventNodeName == 'A') {
+             var id = $(event.target).parents('li').attr('id');//选择的id值
+             if (isNaN(id)) {
+             parentId = id;
+             }
+             else {
+             }
+             }
+             })
+
+            //禁止滚动条
+            document.getElementById('modulemanagetree').onmousewheel = function(event) {
+                if (!event) event = window.event;
+                this.scrollTop = this.scrollTop - (event.wheelDelta ? event.wheelDelta : -event.detail * 10);
+                return false;
+            }*/
+//            }();
+        }
+    init();
+
+    }
+</script>
+
+</body>
+</html>
