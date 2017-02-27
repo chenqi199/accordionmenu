@@ -12,34 +12,66 @@
         !important;
         }
 
-        .jstree-default .jstree-themeicon { /*去除文件夹图标*/
-            background-position: 49px -1px;
+        /*.jstree-default .jstree-themeicon { !*去除文件夹图标*!*/
+            /*background-position: 49px -1px;*/
 
-        }
-        /*每一行的背景图片*/
+        /*}*/
+
+        /*二级节点及以后一行的背景图片*/
         #modulemanagetree ul li {
+            background: url("images/left_munebg.jpg");
+
+        !important;
+        }
+        /*修改一级节点图标*/
+        #modulemanagetree ul li .jstree-themeicon {
+            background-image: url("images/icon_page.gif");
+            background-position: 0px 4px;
+        }
+         /*修改二级节点文件图标*/
+        #modulemanagetree ul li ul li .jstree-themeicon {
+            background-image: url("");
+            background-position: 0px 0px;
+        }
+
+        /*.jstree-default .jstree-themeicon {*/
+            /*background-position: 0px 4px;*/
+        /*}*/
+        /*   #modulemanagetree ul li  .jstree-icon {
+            background-image: url("32px.png");
+
+        }*/
+
+        #modulemanagetree ul li ul
+
+
+        /*二级节点及以后一行的背景图片*/
+        #modulemanagetree ul li ul li {
             background: url("images/left_munebg02.jpg");
         !important;
         }
-            /*点击效果*/
+
+        /*点击效果*/
         .jstree-default .jstree-wholerow-clicked {
             background: #48c969;
             background: -webkit-linear-gradient(top, #48c969 0, #48c969 100%);
             background: linear-gradient(to bottom, #48c969 0, #0ea346 100%);
         !important;
         }
-            /*鼠标停留效果*/
+
+        /*鼠标停留效果*/
         .jstree-default .jstree-wholerow-hovered {
             background: url("images/left_munebg.jpg") repeat-x;
             font-weight: bold;
         !important;
         }
-            /*默认图标隐藏，100%是单击效果*/
+
+        /*默认图标隐藏，100%是单击效果*/
         /*.jstree-default .jstree-icon:empty {*/
-            /*width: 100%;*/
-            /*height: 24px;*/
-            /*line-height: 24px;*/
-            /*display: none;*/
+        /*width: 100%;*/
+        /*height: 24px;*/
+        /*line-height: 24px;*/
+        /*display: none;*/
         /*}*/
     </style>
 </head>
@@ -82,6 +114,7 @@
 
 <script>
 
+
     function modulemanager() {
         console.log("触发模块管理按钮");
 
@@ -89,6 +122,31 @@
 //            keyboard: false,
 //            show: true
 //        });
+
+        $('#modulemanagetree'). bind("select_node.jstree", function (e, data) { //左键单击事件
+            //触发toggle_node 事件 就行了
+
+
+            $('#modulemanagetree').jstree("toggle_node", "#" + data.node.id);//展开点击事件对象子节点
+//
+//                $('#modulemanagetree').jstree("toggle_node", ".jstree-wholerow jstree-wholerow-clicked");
+
+
+
+            try {
+
+                var treeNodes= $("#" + data.node.id).siblings();
+                for(var i = 0; i<treeNodes.length;i++){
+                    $('#modulemanagetree').jstree("close_node", treeNodes[i]);//关闭点击事件对象的兄弟节点
+
+                }
+
+                console.log(treeNodes[i]);
+            } catch (e) {
+                console.log(e+'++++++++++++++++++++++++++++++++++')
+            }
+
+        });
 
         function init() {
             console.log("initTree");
@@ -104,21 +162,79 @@
                     check_callback: true,
 
                     data: [
-                        {"id": "1", "parent": "#", "text": "root"},
-//                        { "id" : "11", "parent" : "#", "text" : "chenqi" ,"children":true },
-                        {"id": "2", "parent": "1", "text": "child 1", a_attr: {'href': 'www.baidu.com'}},
-                        {"id": "3", "parent": "1", "text": "child 2", li_attr: {'href': 'www.tobao.com'}},
-                        {"id": "31", "parent": "2", "text": "child 3"},
-                        {"id": "32", "parent": "2", "text": "child 4"},
-                        {"id": "33", "parent": "#", "text": "child 5"},
-                        {"id": "34", "parent": "2", "text": "child 5"},
-                        {"id": "35", "parent": "3", "text": "child 5"},
-                        {"id": "36", "parent": "3", "text": "child 7"},
-                        {"id": "37", "parent": "3", "text": "child 8"},
-                        {"id": "38", "parent": "3", "text": "child 88"},
-                        {"id": "39", "parent": "3", "text": "child 77"},
-                        {"id": "13", "parent": "3", "text": "child 24"},
-                        {"id": "23", "parent": "2", "text": "child 26"}
+//                        {"id": "1", "parent": "#", "text": "root"},
+////                        { "id" : "11", "parent" : "#", "text" : "chenqi" ,"children":true },
+//                        {"id": "2", "parent": "1", "text": "child 1", a_attr: {'href': 'www.baidu.com'}},
+//                        {"id": "3", "parent": "1", "text": "child 2", li_attr: {'href': 'www.tobao.com'}},
+
+
+                        //===============================doc manager start=================================================
+
+                        {"id": "senddoc", "parent": "#", "text": "发文管理", a_attr: {'href': ''}},
+                        {"id": "qicaofawen", "parent": "senddoc", "text": "起草发文", a_attr: {'href': ''}},
+
+                        {"id": "daiban", "parent": "senddoc", "text": "待 办 ", a_attr: {'href': ''}},
+                        //========================待办子分类
+                        {"id": "daidenji", "parent": "daiban", "text": "待登记 ", a_attr: {'href': ''}},
+                        {"id": "daipaiban", "parent": "daiban", "text": "待排版 ", a_attr: {'href': ''}},
+                        {"id": "daigaizhang", "parent": "daiban", "text": "待盖章 ", a_attr: {'href': ''}},
+                        {"id": "daifasong", "parent": "daiban", "text": "待发送 ", a_attr: {'href': ''}},
+                        //=============================
+
+                        {"id": "jinban", "parent": "senddoc", "text": "经 办", a_attr: {'href': ''}},
+                        {"id": "benhang", "parent": "senddoc", "text": "本行发文 ", a_attr: {'href': ''}},
+                        //========================本行发文子分类
+                        {"id": "andaizi", "parent": "benhang", "text": "按代字 ", a_attr: {'href': ''}},
+                        {"id": "anqianfa", "parent": "benhang", "text": "按签发 ", a_attr: {'href': ''}},
+                        {"id": "anzhuban", "parent": "benhang", "text": "按主办 ", a_attr: {'href': ''}},
+                        //=============================
+
+                        {"id": "fawendengji", "parent": "senddoc", "text": "发文登记簿", a_attr: {'href': ''}},
+                        //========================发文登记簿子分类
+                        {"id": "fawenandai", "parent": "fawendengji", "text": "按代字", a_attr: {'href': ''}},
+                        {"id": "fawenanqian", "parent": "fawendengji", "text": "按签发", a_attr: {'href': ''}},
+                        {"id": "fawenanzhu", "parent": "fawendengji", "text": "按主办", a_attr: {'href': ''}},
+                        {"id": "huoshoujilu", "parent": "fawendengji", "text": "收回记录", a_attr: {'href': ''}},
+                        //=============================
+
+                        {"id": "fanwendenji", "parent": "senddoc", "text": "翻印登记簿", a_attr: {'href': ''}},
+                        {"id": "zhifadenji", "parent": "senddoc", "text": "直发登记簿", a_attr: {'href': ''}},
+                        {"id": "tuiwendenji", "parent": "senddoc", "text": "退文记录", a_attr: {'href': ''}},
+                        {"id": "canshupeizhi", "parent": "senddoc", "text": "参数配置 ", a_attr: {'href': ''}},
+                        //========================参数配置  子分类
+                        {"id": "jibenpeizi", "parent": "canshupeizhi", "text": "基本配置 ", a_attr: {'href': ''}},
+                        {"id": "gongwenzhonglei", "parent": "canshupeizhi", "text": "公文种类 ", a_attr: {'href': ''}},
+                        {"id": "fangzhengword", "parent": "canshupeizhi", "text": "方正Word宏模板 ", a_attr: {'href': ''}},
+                        {"id": "huiqianshuoming", "parent": "canshupeizhi", "text": " 会签情况说明模板", a_attr: {'href': ''}},
+                        {"id": "wenhaoweihu", "parent": "canshupeizhi", "text": "文号维护 ", a_attr: {'href': ''}},
+                        //=============================
+                        //=================================================发文管理结束========================================================
+
+
+                        {"id": "getdoc", "parent": "#", "text": "收文管理", a_attr: {'href': ''}},
+                        //========================收文管理  子分类
+                        {"id": "getdocdaidengji", "parent": "getdoc", "text": "待登记", a_attr: {'href': ''}},
+                        {"id": "getdocdaiban", "parent": "getdoc", "text": "待办", a_attr: {'href': ''}},
+                        {"id": "getdocjingban", "parent": "getdoc", "text": "经办", a_attr: {'href': ''}},
+                        {"id": "getdocbumenshouwen", "parent": "getdoc", "text": "部门收文 ", a_attr: {'href': ''}},
+                        {"id": "getdocbumendenjibo", "parent": "getdoc", "text": "部门收文登记簿 ", a_attr: {'href': ''}},
+                        {"id": "getdocshouwendenjibo", "parent": "getdoc", "text": "收文登记簿", a_attr: {'href': ''}},
+                        {"id": "getdoczhifadenjibo", "parent": "getdoc", "text": "直发登记簿", a_attr: {'href': ''}},
+                        {"id": "getdoctuiwendenjibo", "parent": "getdoc", "text": "退文登记簿", a_attr: {'href': ''}},
+                        {"id": "getdoccanshupeizhi", "parent": "getdoc", "text": "参数配置", a_attr: {'href': ''}},
+                        //=============================
+
+
+
+
+
+
+                        {"id": "hanbo", "parent": "#", "text": "签报管理", a_attr: {'href': ''}},
+                        {"id": "hanjian", "parent": "#", "text": "函件管理", a_attr: {'href': ''}},
+                        {"id": "doban", "parent": "#", "text": "督办管理", a_attr: {'href': ''}},
+,
+
+                        //===============================doc manager end=================================================
                     ]
                 },
                 plugins: ["wholerow", "contextmenu", "themes"],//指定使用哪些插件
@@ -149,30 +265,13 @@
                 themes: {        //themes插件设置
                     theme: "default", //设置theme主题，默认是"default"，可选值：default、apple、classic、default-rtl
                     url: false,        //设置theme css文件的路径
-                    dots: true,        //是否显示虚线点
-                    icons: true    //是否显示节点前的图标，$("a > ins.jstree-icon")
+                    dots: false,        //是否显示虚线点
+                    icons: false    //是否显示节点前的图标，$("a > ins.jstree-icon")
                 }
 //
             });
 
 
-
-            $('#modulemanagetree'). bind("select_node.jstree",function(e,data){ //点击事件
-                //触发toggle_node 事件 就行了
-
-
-                $('#modulemanagetree').jstree("toggle_node", "#"+data.node.id);
-//
-//                $('#modulemanagetree').jstree("toggle_node", ".jstree-wholerow jstree-wholerow-clicked");
-                $('#modulemanagetree').jstree("close_node", $("#"+data.node.id).siblings());
-
-                try{
-                    console.log($("#"+data.node.id).siblings());
-                }catch (e){
-                    console.log(e)
-                }
-
-            });
 
 
         }
