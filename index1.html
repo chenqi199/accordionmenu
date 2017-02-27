@@ -8,33 +8,39 @@
     <style>
 
         .jstree-default .jstree-node { /*去除缩进*/
-             margin-left: 0px;
+            margin-left: 0px;
         !important;
         }
 
-        .jstree-default .jstree-themeicon {  /*去除文件夹图标*/
+        .jstree-default .jstree-themeicon { /*去除文件夹图标*/
             background-position: 49px -1px;
 
         }
-
-        #modulemanagetree ul li{
+        /*每一行的背景图片*/
+        #modulemanagetree ul li {
             background: url("images/left_munebg02.jpg");
         !important;
         }
-
+            /*点击效果*/
         .jstree-default .jstree-wholerow-clicked {
             background: #48c969;
-            background: -webkit-linear-gradient(top,#48c969 0,#48c969 100%);
+            background: -webkit-linear-gradient(top, #48c969 0, #48c969 100%);
             background: linear-gradient(to bottom, #48c969 0, #0ea346 100%);
         !important;
         }
-
+            /*鼠标停留效果*/
         .jstree-default .jstree-wholerow-hovered {
             background: url("images/left_munebg.jpg") repeat-x;
             font-weight: bold;
         !important;
         }
-
+            /*默认图标隐藏，100%是单击效果*/
+        /*.jstree-default .jstree-icon:empty {*/
+            /*width: 100%;*/
+            /*height: 24px;*/
+            /*line-height: 24px;*/
+            /*display: none;*/
+        /*}*/
     </style>
 </head>
 
@@ -54,13 +60,12 @@
 
 </div>
 <div class="main">
-    <div class="left" id="leftnavgator"  >
+    <div class="left" id="leftnavgator">
         <p>模块管理<a href="#"></a></p>
 
         <div class="mune_l">
             <div id="modulemanagetree" class="tree-demo">
             </div>
-
 
 
             <div class="right">
@@ -73,11 +78,11 @@
 <script type="text/javascript" src="js/ziliao.js"></script>
 <script type="text/javascript" src="js/jquery.tabslet.min.js"></script>
 <script type="text/javascript" src="js/initializers.js"></script>
-<script  type="text/javascript" src="jstree/dist/jstree.js"></script>
+<script type="text/javascript" src="jstree/dist/jstree.js"></script>
 
 <script>
 
-    function modulemanager(){
+    function modulemanager() {
         console.log("触发模块管理按钮");
 
 //        $('#alertTree').modal({
@@ -85,76 +90,76 @@
 //            show: true
 //        });
 
-        function init(){
+        function init() {
             console.log("111");
-           /* var ajaxTreeSample = function () {
-                var tree = $("#modulemanagetree");
-                tree.jstree("uncheck_all");
-                tree.jstree({
-                    'plugins' : [ "checkbox" ], //出现选择框
-                    'checkbox': { cascade: "", three_state: false }, //级联
-                    "core": {
-                      //  "multiple": treeMultiple, // 允许多选
-                        'expand_selected_onload': true, //选中项蓝色底显示
-                        'tie_selection':false,
-                        "themes": {
-                            "responsive": false
-                        },
-                        "check_callback": true,
+            /* var ajaxTreeSample = function () {
+             var tree = $("#modulemanagetree");
+             tree.jstree("uncheck_all");
+             tree.jstree({
+             'plugins' : [ "checkbox" ], //出现选择框
+             'checkbox': { cascade: "", three_state: false }, //级联
+             "core": {
+             //  "multiple": treeMultiple, // 允许多选
+             'expand_selected_onload': true, //选中项蓝色底显示
+             'tie_selection':false,
+             "themes": {
+             "responsive": false
+             },
+             "check_callback": true,
 
-                        data : [
-                            { "id" : "1", "parent" : "#", "text" : "root" },
-                            { "id" : "2", "parent" : "1", "text" : "child 1" },
-                            { "id" : "3", "parent" : "1", "text" : "child 2" }
-                        ]
+             data : [
+             { "id" : "1", "parent" : "#", "text" : "root" },
+             { "id" : "2", "parent" : "1", "text" : "child 1" },
+             { "id" : "3", "parent" : "1", "text" : "child 2" }
+             ]
 
-                        /!*'data': {
-                            'url': jQuery.getBasePath() + '/group/listOrgsByUser.do',
-                            'data': function (node) {
-                                return {
-                                    'parentId': node.id === '#' ? "-1" : node.id
-                                };
-                            }
-                        },*!/
-                    }
-                });*/
+             /!*'data': {
+             'url': jQuery.getBasePath() + '/group/listOrgsByUser.do',
+             'data': function (node) {
+             return {
+             'parentId': node.id === '#' ? "-1" : node.id
+             };
+             }
+             },*!/
+             }
+             });*/
 
             $('#modulemanagetree').jstree({
-                core : {
+                core: {
                     'expand_selected_onload': true, //选中项蓝色底显示
-                    'tie_selection':false,
+                    'tie_selection': false,
                     "themes": {
                         "responsive": false
                     },
-                    check_callback : true,
+                    check_callback: true,
 
-            data : [
-                        { "id" : "1", "parent" : "#", "text" : "root" },
+                    data: [
+                        {"id": "1", "parent": "#", "text": "root"},
 //                        { "id" : "11", "parent" : "#", "text" : "chenqi" ,"children":true },
-                        { "id" : "2", "parent" : "1", "text" : "child 1" ,  a_attr  : {'href':'www.baidu.com'}   },
-                        { "id" : "3", "parent" : "1", "text" : "child 2" ,li_attr     : {'href':'www.tobao.com'}  },
-                        { "id" : "31", "parent" : "2", "text" : "child 3" },
-                        { "id" : "32", "parent" : "2", "text" : "child 4" },
-                        { "id" : "33", "parent" : "#", "text" : "child 5" },
-                        { "id" : "34", "parent" : "2", "text" : "child 5" },
-                        { "id" : "35", "parent" : "3", "text" : "child 5" },
-                        { "id" : "36", "parent" : "3", "text" : "child 7" },
-                        { "id" : "37", "parent" : "3", "text" : "child 8" },
-                        { "id" : "38", "parent" : "3", "text" : "child 88" },
-                        { "id" : "39", "parent" : "3", "text" : "child 77" },
-                        { "id" : "13", "parent" : "3", "text" : "child 24" },
-                        { "id" : "23", "parent" : "2", "text" : "child 26" },
+                        {"id": "2", "parent": "1", "text": "child 1", a_attr: {'href': 'www.baidu.com'}},
+                        {"id": "3", "parent": "1", "text": "child 2", li_attr: {'href': 'www.tobao.com'}},
+                        {"id": "31", "parent": "2", "text": "child 3"},
+                        {"id": "32", "parent": "2", "text": "child 4"},
+                        {"id": "33", "parent": "#", "text": "child 5"},
+                        {"id": "34", "parent": "2", "text": "child 5"},
+                        {"id": "35", "parent": "3", "text": "child 5"},
+                        {"id": "36", "parent": "3", "text": "child 7"},
+                        {"id": "37", "parent": "3", "text": "child 8"},
+                        {"id": "38", "parent": "3", "text": "child 88"},
+                        {"id": "39", "parent": "3", "text": "child 77"},
+                        {"id": "13", "parent": "3", "text": "child 24"},
+                        {"id": "23", "parent": "2", "text": "child 26"}
                     ]
                 },
-                plugins : ["wholerow","contextmenu","themes"],//指定使用哪些插件
-                "contextmenu": {
+                plugins: ["wholerow", "contextmenu", "themes"],//指定使用哪些插件
+                "contextmenu": {                    //自定义右键点击事件
                     "items": {
                         "create": null,
                         "rename": null,
                         "remove": null,
                         "ccp": null,
                         "add": {
-                            "label": "add",
+                            "label": "添加",
                             "action": function (obj) {
                                 var inst = jQuery.jstree.reference(obj.reference);
                                 var clickedNode = inst.get_node(obj.reference);
@@ -162,7 +167,7 @@
                             }
                         },
                         "delete": {
-                            "label": "delete",
+                            "label": "删除",
                             "action": function (obj) {
                                 var inst = jQuery.jstree.reference(obj.reference);
                                 var clickedNode = inst.get_node(obj.reference);
@@ -171,39 +176,66 @@
                         }
                     }
                 },
-                themes:{        //themes插件设置
-                    theme : "default", //设置theme主题，默认是"default"，可选值：default、apple、classic、default-rtl
-                    url : false,        //设置theme css文件的路径
-                    dots : true,        //是否显示虚线点
-                    icons : true    //是否显示节点前的图标，$("a > ins.jstree-icon")
+                themes: {        //themes插件设置
+                    theme: "default", //设置theme主题，默认是"default"，可选值：default、apple、classic、default-rtl
+                    url: false,        //设置theme css文件的路径
+                    dots: true,        //是否显示虚线点
+                    icons: true    //是否显示节点前的图标，$("a > ins.jstree-icon")
                 }
-            }).on("ready.jstree", function (e, data) {
-                data.instance.close_all();
+//            }).on("ready.jstree", function (e, data) {
+//                data.instance.close_all();
+//            }).find("clicked.jstree",function(event){
+//                alert("111");
+//            }).bind("clicked.jstree", function (event) {
+//                var eventNodeName = event.target.nodeName;
+//                if (eventNodeName == 'INS') {
+//                    console.log("click event happen");
+//                    return;
+//                } else if (eventNodeName == 'A') {
+//                    var id = $(event.target).parents('li').attr('id');//选择的id值
+//                    if (isNaN(id)) {
+//                        parentId = id;
+//                        console.log('111')
+//                    }
+//                    else {
+//                    }
+//                }
             });
-            /*
-             * .bind("clicked.jstree", function (event) {
-             var eventNodeName = event.target.nodeName;
-             if (eventNodeName == 'INS') {
-             return;
-             } else if (eventNodeName == 'A') {
-             var id = $(event.target).parents('li').attr('id');//选择的id值
-             if (isNaN(id)) {
-             parentId = id;
-             }
-             else {
-             }
-             }
-             })
 
             //禁止滚动条
-            document.getElementById('modulemanagetree').onmousewheel = function(event) {
-                if (!event) event = window.event;
-                this.scrollTop = this.scrollTop - (event.wheelDelta ? event.wheelDelta : -event.detail * 10);
-                return false;
-            }*/
+            /* document.getElementById('modulemanagetree').onmousewheel = function(event) {
+             if (!event) event = window.event;
+             this.scrollTop = this.scrollTop - (event.wheelDelta ? event.wheelDelta : -event.detail * 10);
+             return false;
+             }*/
 //            }();
+
+
+//            $('#modulemanagetree').bind('click.jstree',function(e,data){
+//               console.log("qqq");
+//            });
+
+            $('#modulemanagetree'). bind("select_node.jstree",function(e,data){ //点击事件
+                //触发toggle_node 事件 就行了
+
+
+                $('#modulemanagetree').jstree("toggle_node", "#"+data.node.id);
+//
+//                $('#modulemanagetree').jstree("toggle_node", ".jstree-wholerow jstree-wholerow-clicked");
+                $('#modulemanagetree').jstree("close_node", $("#"+data.node.id).siblings());
+
+                try{
+                    console.log($("#"+data.node.id).siblings());
+                }catch (e){
+                    console.log(e)
+                }
+
+            });
+
+
         }
-    init();
+
+        init();
 
     }
 </script>
