@@ -91,38 +91,8 @@
 //        });
 
         function init() {
-            console.log("111");
-            /* var ajaxTreeSample = function () {
-             var tree = $("#modulemanagetree");
-             tree.jstree("uncheck_all");
-             tree.jstree({
-             'plugins' : [ "checkbox" ], //出现选择框
-             'checkbox': { cascade: "", three_state: false }, //级联
-             "core": {
-             //  "multiple": treeMultiple, // 允许多选
-             'expand_selected_onload': true, //选中项蓝色底显示
-             'tie_selection':false,
-             "themes": {
-             "responsive": false
-             },
-             "check_callback": true,
+            console.log("initTree");
 
-             data : [
-             { "id" : "1", "parent" : "#", "text" : "root" },
-             { "id" : "2", "parent" : "1", "text" : "child 1" },
-             { "id" : "3", "parent" : "1", "text" : "child 2" }
-             ]
-
-             /!*'data': {
-             'url': jQuery.getBasePath() + '/group/listOrgsByUser.do',
-             'data': function (node) {
-             return {
-             'parentId': node.id === '#' ? "-1" : node.id
-             };
-             }
-             },*!/
-             }
-             });*/
 
             $('#modulemanagetree').jstree({
                 core: {
@@ -182,38 +152,10 @@
                     dots: true,        //是否显示虚线点
                     icons: true    //是否显示节点前的图标，$("a > ins.jstree-icon")
                 }
-//            }).on("ready.jstree", function (e, data) {
-//                data.instance.close_all();
-//            }).find("clicked.jstree",function(event){
-//                alert("111");
-//            }).bind("clicked.jstree", function (event) {
-//                var eventNodeName = event.target.nodeName;
-//                if (eventNodeName == 'INS') {
-//                    console.log("click event happen");
-//                    return;
-//                } else if (eventNodeName == 'A') {
-//                    var id = $(event.target).parents('li').attr('id');//选择的id值
-//                    if (isNaN(id)) {
-//                        parentId = id;
-//                        console.log('111')
-//                    }
-//                    else {
-//                    }
-//                }
+//
             });
 
-            //禁止滚动条
-            /* document.getElementById('modulemanagetree').onmousewheel = function(event) {
-             if (!event) event = window.event;
-             this.scrollTop = this.scrollTop - (event.wheelDelta ? event.wheelDelta : -event.detail * 10);
-             return false;
-             }*/
-//            }();
 
-
-//            $('#modulemanagetree').bind('click.jstree',function(e,data){
-//               console.log("qqq");
-//            });
 
             $('#modulemanagetree'). bind("select_node.jstree",function(e,data){ //点击事件
                 //触发toggle_node 事件 就行了
