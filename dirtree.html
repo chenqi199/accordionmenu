@@ -6,6 +6,7 @@
     <link href='css/style.css' rel='stylesheet'/>
     <link href='jstree/dist/themes/default/style.min.css' rel="stylesheet"/>
     <style>
+/*
 
         #modulemanagetree {
             overflow-y: hidden;
@@ -70,6 +71,7 @@
         .have-child {
             background: #ff0000;
         }
+*/
 
     </style>
 </head>
@@ -117,14 +119,14 @@
         console.log("触发模块管理按钮");
 
         /*function changeIcon() {
-            var childTitle = $(".jstree-node");
-            for (var i = 0, len = childTitle.length; i < len; i++) {
-              var childUl = $(childTitle[i]).find(".jstree-children");
-                if(childUl){
-                    $(childTitle[i]).addClass("have-child")
-                }
-            }
-        }*/
+         var childTitle = $(".jstree-node");
+         for (var i = 0, len = childTitle.length; i < len; i++) {
+         var childUl = $(childTitle[i]).find(".jstree-children");
+         if(childUl){
+         $(childTitle[i]).addClass("have-child")
+         }
+         }
+         }*/
 
         $('#modulemanagetree'). bind("select_node.jstree", function (e, data) { //左键单击事件
             //触发toggle_node 事件  就行了
@@ -284,9 +286,9 @@
         }
 
         init();
-/*
-        changeIcon();
-*/
+        /*
+         changeIcon();
+         */
 
     }
 </script>
