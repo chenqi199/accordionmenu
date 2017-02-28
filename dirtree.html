@@ -68,11 +68,12 @@
             display: none;
         }
 
+
+*/
+
         .have-child {
             background: #ff0000;
         }
-*/
-
     </style>
 </head>
 
@@ -130,13 +131,9 @@
 
         $('#modulemanagetree'). bind("select_node.jstree", function (e, data) { //左键单击事件
             //触发toggle_node 事件  就行了
-
-
             $('#modulemanagetree').jstree("toggle_node", "#" + data.node.id);//展开点击事件对象子节点
 //
 //                $('#modulemanagetree').jstree("toggle_node", ".jstree-wholerow jstree-wholerow-clicked");
-
-
             try {
 
                 var treeNodes = $("#" + data.node.id).siblings();
@@ -149,7 +146,12 @@
 
                 console.log(childs);
                 for (var i = 0; i < childs.length; i++) {
-                    console.log("childs[i]============="+$(childs[i]));
+                    var isHasChilds = $('#modulemanagetree').jstree("is_leaf", childs[i]);
+                    if (!isHasChilds){
+                        console.log(childs[i].innerText+"============="+ $('#modulemanagetree').jstree("is_leaf", childs[i]));
+                        $($(childs[i]).i).removeClass('jstree-icon jstree-ocl');
+                        $(childs[i]).addClass("have-child");
+                    }
 
                 }
 
