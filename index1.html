@@ -67,10 +67,6 @@
             display: none;
         }
 
-        .have-child {
-            background: #ff0000;
-        }
-
     </style>
 </head>
 
@@ -117,44 +113,38 @@
         console.log("触发模块管理按钮");
 
         /*function changeIcon() {
-            var childTitle = $(".jstree-node");
-            for (var i = 0, len = childTitle.length; i < len; i++) {
-              var childUl = $(childTitle[i]).find(".jstree-children");
-                if(childUl){
-                    $(childTitle[i]).addClass("have-child")
-                }
-            }
-        }*/
+         var childTitle = $(".jstree-node");
+         for (var i = 0, len = childTitle.length; i < len; i++) {
+         var childUl = $(childTitle[i]).find(".jstree-children");
+         if(childUl){
+         $(childTitle[i]).addClass("have-child")
+         }
+         }
+         }*/
 
         $('#modulemanagetree'). bind("select_node.jstree", function (e, data) { //左键单击事件
             //触发toggle_node 事件  就行了
-
-
             $('#modulemanagetree').jstree("toggle_node", "#" + data.node.id);//展开点击事件对象子节点
-//
 //                $('#modulemanagetree').jstree("toggle_node", ".jstree-wholerow jstree-wholerow-clicked");
-
-
             try {
-
                 var treeNodes = $("#" + data.node.id).siblings();
                 for (var i = 0; i < treeNodes.length; i++) {
                     $('#modulemanagetree').jstree("close_node", treeNodes[i]);//关闭点击事件对象的兄弟节点
 //                    console.log(treeNodes[i]);
                 }
 //                var childs=  $('#modulemanagetree').jstree("get_children_dom",  data.node);
-                var childs=  $("#" + data.node.id).find("li");
-
-                console.log(childs);
+                var childs = $("#" + data.node.id).find("li");
+//                console.log(childs);
                 for (var i = 0; i < childs.length; i++) {
-                    console.log("childs[i]============="+$(childs[i]));
-
+                    var isHasChilds = $('#modulemanagetree').jstree("is_leaf", childs[i]);
+                    if (!isHasChilds) {
+                        var iconPrev =  $(childs[i]).find(".jstree-icon").eq(0).prev();
+                        iconPrev.css("background","url('images/menu_line.gif') no-repeat");
+                    }
                 }
-
             } catch (e) {
                 console.log(e + '++++++++++++++++++++++++++++++++++')
             }
-
         });
 
         function init() {
@@ -185,7 +175,7 @@
                             "parent": "senddoc",
                             "text": "起草发文",
                             a_attr: {'href': ''},
-                            "children": true
+                            "children": false
                         },
 
                         {"id": "daiban", "parent": "senddoc", "text": "待 办 ", a_attr: {'href': ''}},
@@ -284,9 +274,9 @@
         }
 
         init();
-/*
-        changeIcon();
-*/
+        /*
+         changeIcon();
+         */
 
     }
 </script>

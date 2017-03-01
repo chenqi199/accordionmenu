@@ -149,8 +149,9 @@
                     var isHasChilds = $('#modulemanagetree').jstree("is_leaf", childs[i]);
                     if (!isHasChilds){
                         console.log(childs[i].innerText+"============="+ $('#modulemanagetree').jstree("is_leaf", childs[i]));
-                        $($(childs[i]).i).removeClass('jstree-icon jstree-ocl');
-                        $(childs[i]).addClass("have-child");
+                        $($(childs[i]).li. i).removeClass('jstree-icon jstree-ocl');
+                        console.log($(childs[i]));
+                        $($(childs[i]).li. i).addClass("have-child");
                     }
 
                 }
