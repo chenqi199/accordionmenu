@@ -2,148 +2,91 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>无标题文档</title>
+    <title>首页——模块管理</title>
     <link href='css/style.css' rel='stylesheet'/>
     <link href='jstree/dist/themes/default/style.min.css' rel="stylesheet"/>
     <style>
-        /*
 
-                #modulemanagetree {
-                    overflow-y: hidden;
-                }
+        #modulemanagetree {
+            overflow-y: hidden;
+        }
 
-                #leftnavgator .right {
-                    padding: 0;
-                }
+        .jstree-default .jstree-node {
+            min-height: 31px;
+            line-height: 30px;
+            /*margin-left: 24px;*/
+            min-width: 30px;
+        }
 
-                .main .left .mune_l {
-                    padding: 10px 4px 4px 4px;
-                    margin-bottom: 15px;
-                }
+        #leftnavgator .right {
+            padding: 0;
+        }
 
-                .jstree-default .jstree-wholerow {
-                    background-image: url("images/left_menuBG.gif");
-                    background-position: 0px -2px;
-                }
+        .main .left .mune_l {
+            padding: 10px 4px 4px 4px;
+            margin-bottom: 15px;
+        }
 
-                .jstree-default .jstree-wholerow-clicked {
-                    background-image: url("images/left_menuBG2.gif");
-                    background-position: 0px -2px;
-                }
+        .jstree-default .jstree-wholerow {
+            background-image: url("images/left_menuBG.gif");
+            height: 30px;
+        }
 
-                .jstree-default .jstree-wholerow-hovered {
-                    background-image: url("images/left_menuBG2.gif");
-                    background-position: 0px -2px;
-                }
+        .jstree-default .jstree-wholerow-clicked {
+            background-image: url("images/left_menuBG2.gif");
+            /*background-position: 0px -2px;*/
+        }
 
-                #modulemanagetree ul li ul li {
-                    margin-left: 0px;
-                }
+        .jstree-default .jstree-wholerow-hovered {
+            background-image: url("images/left_menuBG2.gif");
+            /*background-position: 0px -2px;*/
+        }
 
-                #modulemanagetree ul li ul li .jstree-wholerow {
-                    background: url("images/menu_line_obj.gif") no-repeat;
-                }
+        #modulemanagetree ul li ul li {
+            margin-left: -15px;
+        }
 
-                #modulemanagetree ul li ul li a:hover {
-                    text-decoration: underline;
-                }
+        #modulemanagetree ul li ul li .jstree-wholerow {
+            background: url("images/menu_line_obj.gif") no-repeat;
+            background-position-y: 4px;
+        }
 
-                .jstree-default .jstree-node, .jstree-default .jstree-icon {
-                    background: none;
-                }
+        #modulemanagetree ul li ul li a:hover {
+            text-decoration: underline;
+        }
 
-                #modulemanagetree ul:first-of-type li .jstree-icon:empty {
-                    width: 40px;
-                    background: url("images/icon_page.gif") no-repeat;
-                    background-position: 15px 3px;
-                }
+        .jstree-default .jstree-node, .jstree-default .jstree-icon {
+            background: none;
+        }
 
-                #modulemanagetree ul li ul:first-of-type li .jstree-icon:empty {
-                    width: 40px;
-                    background: url("");
-                    background-position: 15px 3px;
-                }
+        #modulemanagetree ul:first-of-type li .jstree-icon:empty {
+            width: 40px;
+            background: url("images/icon_page.gif") no-repeat;
+            background-position-y: 4px;
+        }
 
-                .jstree-default .jstree-themeicon {
-                    display: none;
-                }
-        */
-        /*.have-child {*/
-        /*background: #ff0000;*/
-        /*}*/
-/*=======================================================================*/
-        /*.jstree-default .jstree-node {*/
-            /*min-height: 31px;*/
-            /*line-height: 30px;*/
-            /*!*margin-left: 24px;*!*/
-            /*min-width: 30px;*/
-        /*}*/
-        /*#leftnavgator .right {*/
-            /*padding: 0;*/
-        /*}*/
-
-        /*.main .left .mune_l {*/
-            /*padding: 10px 4px 4px 4px;*/
-            /*margin-bottom: 15px;*/
-        /*}*/
-
-        /*.jstree-default .jstree-wholerow {*/
-            /*background-image: url("images/left_menuBG.gif");*/
-         /*!*   background-position: 0px -2px;*!*/
-            /*height: 30px;*/
-        /*}*/
-
-        /*.jstree-default .jstree-wholerow-clicked {*/
-            /*background-image: url("images/left_menuBG2.gif");*/
-         /*!*   background-position: 0px -2px;*!*/
-        /*}*/
-
-        /*.jstree-default .jstree-wholerow-hovered {*/
-            /*background-image: url("images/left_menuBG2.gif");*/
-           /*!* background-position: 0px -2px;*!*/
-        /*}*/
-
-        /*#modulemanagetree ul li ul li {*/
-            /*margin-left: 0px;*/
-        /*}*/
-
-        /*#modulemanagetree ul li ul li a:hover {*/
-            /*text-decoration: underline;*/
-        /*}*/
-
-        /*.jstree-default .jstree-node, .jstree-default .jstree-icon {*/
-            /*background: none;*/
-        /*}*/
-       /*!* .jstree-default .jstree-node {*/
-            /*min-height: 24px;*/
-            /*line-height: 24px;*/
-             /*margin-left: 0px;*/
-            /*min-width: 24px;*/
-        /*}*!*/
-        /*#modulemanagetree ul li ul li .jstree-wholerow {*/
-            /*background: url("images/menu_line_obj.gif") no-repeat;*/
+        #modulemanagetree ul li ul:first-of-type li .jstree-icon:empty {
+            width: 40px;
+            background: url("");
             /*background-position-y: 4px;*/
-        /*}*/
+        }
 
-        /*#modulemanagetree ul li ul li .jstree-default>.jstree-no-dots .jstree-leaf>.jstree-ocl {*/
-            /*background: url("images/menu_line_obj.gif") no-repeat;*/
-            /*background-position-y: 6px;*/
-        /*}*/
-        /*#modulemanagetree ul li ul li.jstree-default>.jstree-closed>.jstree-ocl {*/
-            /*background: url("images/menu_line.gif") no-repeat;*/
-            /*background-position-y: 6px;*/
-        /*}*/
-        /*#modulemanagetree ul li .jstree-default> .jstree-closed>.jstree-ocl {*/
-            /*width: 40px;*/
-            /*background: url("images/icon_page.gif") no-repeat;*/
-            /*!*background-position: 15px 3px;*!*/
-        /*}*/
-        /*#modulemanagetree ul li .jstree-default>.jstree-open>.jstree-ocl {*/
-            /*width: 40px;*/
-            /*background: url("images/icon_page.gif") no-repeat;*/
-            /*!*background-position: 15px 3px;*!*/
-        /*}*/
-        /*===================================================================================*/
+        .jstree-default .jstree-themeicon {
+            display: none;
+        }
+
+        #modulemanagetree ul li ul li ul li .jstree-wholerow {
+            margin-left: 20px;
+            background: url("");
+            /*background-position-x: 14px;*/
+
+        }
+
+        #modulemanagetree ul li ul li ul li {
+            margin-left: 18px;
+
+        }
+
     </style>
 </head>
 
@@ -177,64 +120,48 @@
         </div>
     </div>
 </div>
+<div style="width: 84%;height: 550px;float: right" id="rightdiv">
+
+</div>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/ziliao.js"></script>
-<script type="text/javascript" src="js/jquery.tabslet.min.js"></script>
-<script type="text/javascript" src="js/initializers.js"></script>
-<script type="text/javascript" src="jstree/dist/jstree.js"></script>
+<script type="text/javascript" src="jstree/dist/jstree.min.js"></script>
 
 <script>
 
 
     function modulemanager() {
         console.log("触发模块管理按钮");
-
-
         $('#modulemanagetree'). bind("select_node.jstree", function (e, data) { //左键单击事件
-            //触发toggle_node 事件  就行了
+            //触发toggle_node 事件
             $('#modulemanagetree').jstree("toggle_node", "#" + data.node.id);//展开点击事件对象子节点
-//
-           var getUrl= $('#modulemanagetree').jstree("get_node", "#" + data.node.id).a_attr.href;
-            console.log(getUrl );
-//            window.open(getUrl);
+            var getUrl = $('#modulemanagetree').jstree("get_node", "#" + data.node.id).a_attr.href;
+            console.log(getUrl);
+            if (getUrl) {
+                $("#rightdiv").load(getUrl);
+            }
             try {
                 var treeNodes = $("#" + data.node.id).siblings();
                 for (var i = 0; i < treeNodes.length; i++) {
                     $('#modulemanagetree').jstree("close_node", treeNodes[i]);//关闭点击事件对象的兄弟节点
                 }
                 var childs = $("#" + data.node.id).find("li");
-
-                /*console.log(childs);
-                 for (var i = 0; i < childs.length; i++) {
-                 var isHasChilds = $('#modulemanagetree').jstree("is_leaf", childs[i]);
-                 if (!isHasChilds){
-                 console.log(childs[i].innerText+"============="+ $('#modulemanagetree').jstree("is_leaf", childs[i]));
-                 $($(childs[i]).li. i).removeClass('jstree-icon jstree-ocl');
-                 console.log($(childs[i]));
-                 $($(childs[i]).li. i).addClass("have-child");
-                 }
-                 }*/
-//
-                var childs = $("#" + data.node.id).find("li");
-//                console.log(childs);
                 for (var i = 0; i < childs.length; i++) {
                     var isHasChilds = $('#modulemanagetree').jstree("is_leaf", childs[i]);
                     if (!isHasChilds) {
                         var iconPrev = $(childs[i]).find(".jstree-icon").eq(0).prev();
-                        iconPrev.css({"background":"url('images/menu_line.gif') no-repeat",
-                            "background-position-y":"4px"});
+                        iconPrev.css({
+                            "background": "url('images/menu_line.gif') no-repeat",
+                            "background-position-y": "4px"
+                        });
                     }
                 }
             } catch (e) {
                 console.log(e + '++++++++++++++++++++++++++++++++++')
             }
-
         });
 
         function init() {
             console.log("initTree");
-
-
             $('#modulemanagetree').jstree({
                 core: {
                     'expand_selected_onload': true, //选中项蓝色底显示
@@ -244,38 +171,37 @@
                     },
                     check_callback: true,
 
-                    /*   'data': {  //ajax 请求加载数据
-                     'url': jQuery.getBasePath() + '/group/listOrgsByUser.do',
-                     'data': function (node) {
-                     return {
-                     'parentId': node.id === '#' ? "-1" : node.id
-                     };
-                     }
-                     */
-
                     data: [
-//
+//                        {"id": "1", "parent": "#", "text": "root"},
+////                        { "id" : "11", "parent" : "#", "text" : "chenqi" ,"children":true },
+//                        {"id": "2", "parent": "1", "text": "child 1", a_attr: {'href': 'www.baidu.com'}},
+//                        {"id": "3", "parent": "1", "text": "child 2", li_attr: {'href': 'www.tobao.com'}},
 
                         //===============================doc manager start=================================================
 
-                        {"id": "senddoc", "parent": "#", "text": "发文管理", a_attr: {'href': ''}},
+                        {"id": "senddoc", "parent": "#", "text": "发文管理", a_attr: {'href': 'sentdoc.html'}},
                         {
                             "id": "qicaofawen",
                             "parent": "senddoc",
                             "text": "起草发文",
-                            a_attr: {'href': ''},
+                            a_attr: {'href': 'www.tansun.com.cn'},
                             "children": false
                         },
 
-                        {"id": "daiban", "parent": "senddoc", "text": "待 办 ", a_attr: {'href': ''}},
+                        {"id": "daiban", "parent": "senddoc", "text": "待 办 ", a_attr: {'href': 'daiban.html'}},
                         //========================待办子分类
-                        {"id": "daidenji", "parent": "daiban", "text": "待登记 ", a_attr: {'href': ''}},
+                        {
+                            "id": "daidenji",
+                            "parent": "daiban",
+                            "text": "待登记 ", a_attr: {'href': ''},
+                            "children": true
+                        },
                         {"id": "daipaiban", "parent": "daiban", "text": "待排版 ", a_attr: {'href': ''}},
                         {"id": "daigaizhang", "parent": "daiban", "text": "待盖章 ", a_attr: {'href': ''}},
                         {"id": "daifasong", "parent": "daiban", "text": "待发送 ", a_attr: {'href': ''}},
                         //=============================
 
-                        {"id": "jinban", "parent": "senddoc", "text": "经 办", a_attr: {'href': 'https://www.baidu.com'}},
+                        {"id": "jinban", "parent": "senddoc", "text": "经 办", a_attr: {'href': ''}},
                         {"id": "benhang", "parent": "senddoc", "text": "本行发文 ", a_attr: {'href': ''}},
                         //========================本行发文子分类
                         {"id": "andaizi", "parent": "benhang", "text": "按代字 ", a_attr: {'href': ''}},
@@ -322,8 +248,6 @@
                         {"id": "hanbo", "parent": "#", "text": "签报管理", a_attr: {'href': ''}},
                         {"id": "hanjian", "parent": "#", "text": "函件管理", a_attr: {'href': ''}},
                         {"id": "doban", "parent": "#", "text": "督办管理", a_attr: {'href': ''}},
-                        ,
-
                         //===============================doc manager end=================================================
                     ]
                 },
