@@ -1,91 +1,17 @@
 <!doctype html>
+
 <html>
 <head>
     <meta charset="utf-8">
     <title>首页——模块管理</title>
+
     <link href='css/style.css' rel='stylesheet'/>
     <link href='jstree/dist/themes/default/style.min.css' rel="stylesheet"/>
+
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jstree/dist/jstree.js"></script>
     <style>
 
-        #modulemanagetree {
-            overflow-y: hidden;
-        }
-
-        .jstree-default .jstree-node {
-            min-height: 31px;
-            line-height: 30px;
-            /*margin-left: 24px;*/
-            min-width: 30px;
-        }
-
-        #leftnavgator .right {
-            padding: 0;
-        }
-
-        .main .left .mune_l {
-            padding: 10px 4px 4px 4px;
-            margin-bottom: 15px;
-        }
-
-        .jstree-default .jstree-wholerow {
-            background-image: url("images/left_menuBG.gif");
-            height: 30px;
-        }
-
-        .jstree-default .jstree-wholerow-clicked {
-            background-image: url("images/left_menuBG2.gif");
-            /*background-position: 0px -2px;*/
-        }
-
-        .jstree-default .jstree-wholerow-hovered {
-            background-image: url("images/left_menuBG2.gif");
-            /*background-position: 0px -2px;*/
-        }
-
-        #modulemanagetree ul li ul li {
-            margin-left: -15px;
-        }
-
-        #modulemanagetree ul li ul li .jstree-wholerow {
-            background: url("images/menu_line_obj.gif") no-repeat;
-            background-position-y: 4px;
-        }
-
-        #modulemanagetree ul li ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .jstree-default .jstree-node, .jstree-default .jstree-icon {
-            background: none;
-        }
-
-        #modulemanagetree ul:first-of-type li .jstree-icon:empty {
-            width: 40px;
-            background: url("images/icon_page.gif") no-repeat;
-            background-position-y: 4px;
-        }
-
-        #modulemanagetree ul li ul:first-of-type li .jstree-icon:empty {
-            width: 40px;
-            background: url("");
-            /*background-position-y: 4px;*/
-        }
-
-        .jstree-default .jstree-themeicon {
-            display: none;
-        }
-
-        #modulemanagetree ul li ul li ul li .jstree-wholerow {
-            margin-left: 20px;
-            background: url("");
-            /*background-position-x: 14px;*/
-
-        }
-
-        #modulemanagetree ul li ul li ul li {
-            margin-left: 18px;
-
-        }
 
     </style>
 </head>
@@ -123,19 +49,17 @@
 <div style="width: 84%;height: 550px;float: right" id="rightdiv">
 
 </div>
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="jstree/dist/jstree.min.js"></script>
 
-<script>
+
+<script type="text/javascript">
 
 
     function modulemanager() {
-        console.log("触发模块管理按钮");
+
         $('#modulemanagetree'). bind("select_node.jstree", function (e, data) { //左键单击事件
             //触发toggle_node 事件
             $('#modulemanagetree').jstree("toggle_node", "#" + data.node.id);//展开点击事件对象子节点
             var getUrl = $('#modulemanagetree').jstree("get_node", "#" + data.node.id).a_attr.href;
-            console.log(getUrl);
             if (getUrl) {
                 $("#rightdiv").load(getUrl);
             }
@@ -148,108 +72,116 @@
                 for (var i = 0; i < childs.length; i++) {
                     var isHasChilds = $('#modulemanagetree').jstree("is_leaf", childs[i]);
                     if (!isHasChilds) {
-                        var iconPrev = $(childs[i]).find(".jstree-icon").eq(0).prev();
-                        iconPrev.css({
-                            "background": "url('images/menu_line.gif') no-repeat",
-                            "background-position-y": "4px"
-                        });
+                        /*var iconPrev = $(childs[i]).find(".jstree-icon").eq(0).prev();*/
+                        /* iconPrev.css({*/
+                        /*     "background": "url('images/menu_line.gif') no-repeat"    */
+                        /* });*/
                     }
+                    /**/
                 }
             } catch (e) {
-                console.log(e + '++++++++++++++++++++++++++++++++++')
             }
         });
 
         function init() {
-            console.log("initTree");
             $('#modulemanagetree').jstree({
                 core: {
-                    'expand_selected_onload': true, //选中项蓝色底显示
+
                     'tie_selection': false,
                     "themes": {
                         "responsive": false
                     },
                     check_callback: true,
 
-                    data: [
-//                        {"id": "1", "parent": "#", "text": "root"},
-////                        { "id" : "11", "parent" : "#", "text" : "chenqi" ,"children":true },
-//                        {"id": "2", "parent": "1", "text": "child 1", a_attr: {'href': 'www.baidu.com'}},
-//                        {"id": "3", "parent": "1", "text": "child 2", li_attr: {'href': 'www.tobao.com'}},
-
-                        //===============================doc manager start=================================================
-
-                        {"id": "senddoc", "parent": "#", "text": "发文管理", a_attr: {'href': 'sentdoc.html'}},
-                        {
-                            "id": "qicaofawen",
-                            "parent": "senddoc",
-                            "text": "起草发文",
-                            a_attr: {'href': 'www.tansun.com.cn'},
-                            "children": false
-                        },
-
-                        {"id": "daiban", "parent": "senddoc", "text": "待 办 ", a_attr: {'href': 'daiban.html'}},
-                        //========================待办子分类
-                        {
-                            "id": "daidenji",
-                            "parent": "daiban",
-                            "text": "待登记 ", a_attr: {'href': ''},
-                            "children": true
-                        },
-                        {"id": "daipaiban", "parent": "daiban", "text": "待排版 ", a_attr: {'href': ''}},
-                        {"id": "daigaizhang", "parent": "daiban", "text": "待盖章 ", a_attr: {'href': ''}},
-                        {"id": "daifasong", "parent": "daiban", "text": "待发送 ", a_attr: {'href': ''}},
-                        //=============================
-
-                        {"id": "jinban", "parent": "senddoc", "text": "经 办", a_attr: {'href': ''}},
-                        {"id": "benhang", "parent": "senddoc", "text": "本行发文 ", a_attr: {'href': ''}},
-                        //========================本行发文子分类
-                        {"id": "andaizi", "parent": "benhang", "text": "按代字 ", a_attr: {'href': ''}},
-                        {"id": "anqianfa", "parent": "benhang", "text": "按签发 ", a_attr: {'href': ''}},
-                        {"id": "anzhuban", "parent": "benhang", "text": "按主办 ", a_attr: {'href': ''}},
-                        //=============================
-
-                        {"id": "fawendengji", "parent": "senddoc", "text": "发文登记簿", a_attr: {'href': ''}},
-                        //========================发文登记簿子分类
-                        {"id": "fawenandai", "parent": "fawendengji", "text": "按代字", a_attr: {'href': ''}},
-                        {"id": "fawenanqian", "parent": "fawendengji", "text": "按签发", a_attr: {'href': ''}},
-                        {"id": "fawenanzhu", "parent": "fawendengji", "text": "按主办", a_attr: {'href': ''}},
-                        {"id": "huoshoujilu", "parent": "fawendengji", "text": "收回记录", a_attr: {'href': ''}},
-                        //=============================
-
-                        {"id": "fanwendenji", "parent": "senddoc", "text": "翻印登记簿", a_attr: {'href': ''}},
-                        {"id": "zhifadenji", "parent": "senddoc", "text": "直发登记簿", a_attr: {'href': ''}},
-                        {"id": "tuiwendenji", "parent": "senddoc", "text": "退文记录", a_attr: {'href': ''}},
-                        {"id": "canshupeizhi", "parent": "senddoc", "text": "参数配置 ", a_attr: {'href': ''}},
-                        //========================参数配置  子分类
-                        {"id": "jibenpeizi", "parent": "canshupeizhi", "text": "基本配置 ", a_attr: {'href': ''}},
-                        {"id": "gongwenzhonglei", "parent": "canshupeizhi", "text": "公文种类 ", a_attr: {'href': ''}},
-                        {"id": "fangzhengword", "parent": "canshupeizhi", "text": "方正Word宏模板 ", a_attr: {'href': ''}},
-                        {"id": "huiqianshuoming", "parent": "canshupeizhi", "text": " 会签情况说明模板", a_attr: {'href': ''}},
-                        {"id": "wenhaoweihu", "parent": "canshupeizhi", "text": "文号维护 ", a_attr: {'href': ''}},
-                        //=============================
-                        //=================================================发文管理结束========================================================
 
 
-                        {"id": "getdoc", "parent": "#", "text": "收文管理", a_attr: {'href': ''}},
-                        //========================收文管理  子分类
-                        {"id": "getdocdaidengji", "parent": "getdoc", "text": "待登记", a_attr: {'href': ''}},
-                        {"id": "getdocdaiban", "parent": "getdoc", "text": "待办", a_attr: {'href': ''}},
-                        {"id": "getdocjingban", "parent": "getdoc", "text": "经办", a_attr: {'href': ''}},
-                        {"id": "getdocbumenshouwen", "parent": "getdoc", "text": "部门收文 ", a_attr: {'href': ''}},
-                        {"id": "getdocbumendenjibo", "parent": "getdoc", "text": "部门收文登记簿 ", a_attr: {'href': ''}},
-                        {"id": "getdocshouwendenjibo", "parent": "getdoc", "text": "收文登记簿", a_attr: {'href': ''}},
-                        {"id": "getdoczhifadenjibo", "parent": "getdoc", "text": "直发登记簿", a_attr: {'href': ''}},
-                        {"id": "getdoctuiwendenjibo", "parent": "getdoc", "text": "退文登记簿", a_attr: {'href': ''}},
-                        {"id": "getdoccanshupeizhi", "parent": "getdoc", "text": "参数配置", a_attr: {'href': ''}},
-                        //=============================
-
-
-                        {"id": "hanbo", "parent": "#", "text": "签报管理", a_attr: {'href': ''}},
-                        {"id": "hanjian", "parent": "#", "text": "函件管理", a_attr: {'href': ''}},
-                        {"id": "doban", "parent": "#", "text": "督办管理", a_attr: {'href': ''}},
-                        //===============================doc manager end=================================================
-                    ]
+                   'data': {  //ajax 请求加载数据
+                        'url': 'http://10.6.30.122:8088/tansonjsondemo/menu/getmenu.do',
+                        'data': function (node) {
+                            return {
+                                'parentId': node.id === '#' ? "-1" : node.id
+                            };
+                        }
+                    }
+//                    data: [
+////                        {"id": "1", "parent": "#", "text": "root"},
+//////                        { "id" : "11", "parent" : "#", "text" : "chenqi" ,"children":true },
+////                        {"id": "2", "parent": "1", "text": "child 1", a_attr: {'href': 'www.baidu.com'}},
+////                        {"id": "3", "parent": "1", "text": "child 2", li_attr: {'href': 'www.tobao.com'}},
+//
+//                        //===============================doc manager start=================================================
+//
+//                        {"id": "senddoc", "parent": "#", "text": "发文管理", a_attr: {'href': ''}},
+//                        {
+//                            "id": "qicaofawen",
+//                            "parent": "senddoc",
+//                            "text": "起草发文",
+//                            a_attr: {'href': ''},
+//                            "children": false
+//                        },
+//
+//                        {"id": "daiban", "parent": "senddoc", "text": "待 办 ", a_attr: {'href': ''}},
+//                        //========================待办子分类
+//                        {
+//                            "id": "daidenji",
+//                            "parent": "daiban",
+//                            "text": "待登记 ", a_attr: {'href': ''},
+//                            "children": true
+//                        },
+//                        {"id": "daipaiban", "parent": "daiban", "text": "待排版 ", a_attr: {'href': ''}},
+//                        {"id": "daigaizhang", "parent": "daiban", "text": "待盖章 ", a_attr: {'href': ''}},
+//                        {"id": "daifasong", "parent": "daiban", "text": "待发送 ", a_attr: {'href': ''}},
+//                        //=============================
+//
+//                        {"id": "jinban", "parent": "senddoc", "text": "经 办", a_attr: {'href': ''}},
+//                        {"id": "benhang", "parent": "senddoc", "text": "本行发文 ", a_attr: {'href': ''}},
+//                        //========================本行发文子分类
+//                        {"id": "andaizi", "parent": "benhang", "text": "按代字 ", a_attr: {'href': ''}},
+//                        {"id": "anqianfa", "parent": "benhang", "text": "按签发 ", a_attr: {'href': ''}},
+//                        {"id": "anzhuban", "parent": "benhang", "text": "按主办 ", a_attr: {'href': ''}},
+//                        //=============================
+//
+//                        {"id": "fawendengji", "parent": "senddoc", "text": "发文登记簿", a_attr: {'href': ''}},
+//                        //========================发文登记簿子分类
+//                        {"id": "fawenandai", "parent": "fawendengji", "text": "按代字", a_attr: {'href': ''}},
+//                        {"id": "fawenanqian", "parent": "fawendengji", "text": "按签发", a_attr: {'href': ''}},
+//                        {"id": "fawenanzhu", "parent": "fawendengji", "text": "按主办", a_attr: {'href': ''}},
+//                        {"id": "huoshoujilu", "parent": "fawendengji", "text": "收回记录", a_attr: {'href': ''}},
+//                        //=============================
+//
+//                        {"id": "fanwendenji", "parent": "senddoc", "text": "翻印登记簿", a_attr: {'href': ''}},
+//                        {"id": "zhifadenji", "parent": "senddoc", "text": "直发登记簿", a_attr: {'href': ''}},
+//                        {"id": "tuiwendenji", "parent": "senddoc", "text": "退文记录", a_attr: {'href': ''}},
+//                        {"id": "canshupeizhi", "parent": "senddoc", "text": "参数配置 ", a_attr: {'href': ''}},
+//                        //========================参数配置  子分类
+//                        {"id": "jibenpeizi", "parent": "canshupeizhi", "text": "基本配置 ", a_attr: {'href': ''}},
+//                        {"id": "gongwenzhonglei", "parent": "canshupeizhi", "text": "公文种类 ", a_attr: {'href': ''}},
+//                        {"id": "fangzhengword", "parent": "canshupeizhi", "text": "方正Word宏模板 ", a_attr: {'href': ''}},
+//                        {"id": "huiqianshuoming", "parent": "canshupeizhi", "text": " 会签情况说明模板", a_attr: {'href': ''}},
+//                        {"id": "wenhaoweihu", "parent": "canshupeizhi", "text": "文号维护 ", a_attr: {'href': ''}},
+//                        //=============================
+//                        //=================================================发文管理结束========================================================
+//
+//
+//                        {"id": "getdoc", "parent": "#", "text": "收文管理", a_attr: {'href': ''}},
+//                        //========================收文管理  子分类
+//                        {"id": "getdocdaidengji", "parent": "getdoc", "text": "待登记", a_attr: {'href': ''}},
+//                        {"id": "getdocdaiban", "parent": "getdoc", "text": "待办", a_attr: {'href': ''}},
+//                        {"id": "getdocjingban", "parent": "getdoc", "text": "经办", a_attr: {'href': ''}},
+//                        {"id": "getdocbumenshouwen", "parent": "getdoc", "text": "部门收文 ", a_attr: {'href': ''}},
+//                        {"id": "getdocbumendenjibo", "parent": "getdoc", "text": "部门收文登记簿 ", a_attr: {'href': ''}},
+//                        {"id": "getdocshouwendenjibo", "parent": "getdoc", "text": "收文登记簿", a_attr: {'href': ''}},
+//                        {"id": "getdoczhifadenjibo", "parent": "getdoc", "text": "直发登记簿", a_attr: {'href': ''}},
+//                        {"id": "getdoctuiwendenjibo", "parent": "getdoc", "text": "退文登记簿", a_attr: {'href': ''}},
+//                        {"id": "getdoccanshupeizhi", "parent": "getdoc", "text": "参数配置", a_attr: {'href': ''}},
+//                        //=============================
+//
+//
+//                        {"id": "hanbo", "parent": "#", "text": "签报管理", a_attr: {'href': ''}},
+//                        {"id": "hanjian", "parent": "#", "text": "函件管理", a_attr: {'href': ''}},
+//                        {"id": "doban", "parent": "#", "text": "督办管理", a_attr: {'href': ''}},
+//                        //===============================doc manager end=================================================
+//                    ]
                 },
                 plugins: ["wholerow", "contextmenu", "themes"],//指定使用哪些插件
                 "contextmenu": {                    //自定义右键点击事件
