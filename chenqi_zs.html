@@ -7,6 +7,7 @@
 
     <link href='css/style.css' rel='stylesheet'/>
     <link href='jstree/dist/themes/default/style.min.css' rel="stylesheet"/>
+    <script type="text/javascript" src="js/json2.js"></script>
 
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="jstree/dist/jstree.js"></script>
@@ -95,14 +96,24 @@
 
 
 
-                   'data': {  //ajax 请求加载数据
-                        'url': 'http://10.6.30.122:8088/tansonjsondemo/menu/getmenu.do',
-                        'data': function (node) {
-                            return {
-                                'parentId': node.id === '#' ? "-1" : node.id
-                            };
-                        }
-                    }
+                   'data': function (node, callback) {
+
+
+                       $.ajax({
+                           type: "get",
+                           'url': 'http://10.6.30.122:8088/tansonjsondemo/menu/getmenu.do',
+                           data:{"parentId":  node.id === '#' ? "-1" : node.id},
+                           dataType: "json",
+                           async: false,
+                           success: function (result) {
+                               jsonarray = result;
+
+                           }
+
+                       });
+                       callback.call(this, jsonarray);
+                       alert(JSON.stringify(jsonarray))
+                   }
 //                    data: [
 ////                        {"id": "1", "parent": "#", "text": "root"},
 //////                        { "id" : "11", "parent" : "#", "text" : "chenqi" ,"children":true },
