@@ -1,0 +1,78 @@
+#modulemanagetree {
+    overflow-y: hidden;
+}
+
+.jstree-default .jstree-node {
+    min-height: 31px;
+    line-height: 30px;
+    min-width: 30px;
+}
+
+#leftnavgator .right {
+    padding: 0;
+}
+
+.main .left .mune_l {
+    padding: 10px 4px 4px 4px;
+    margin-bottom: 15px;
+}
+
+.jstree-default .jstree-wholerow {
+    background-image: url("../images/left_menuBG.gif");
+    height: 30px;
+}
+
+.jstree-default .jstree-wholerow-clicked {
+    background-image: url("../images/left_menuBG2.gif");
+}
+
+.jstree-default .jstree-wholerow-hovered {
+    background-image: url("../images/left_menuBG2.gif");
+}
+
+#modulemanagetree ul li ul li {
+    margin-left: -15px;
+}
+
+#modulemanagetree ul li ul {
+    margin-top: 5px;
+}
+
+#modulemanagetree ul li ul li .jstree-wholerow {
+    background: url("../images/menu_line_obj.gif") no-repeat;
+    background-position-y: 4px;
+}
+
+#modulemanagetree ul li ul li a:hover {
+    text-decoration: underline;
+}
+
+.jstree-default .jstree-node, .jstree-default .jstree-icon {
+    background: none;
+}
+
+#modulemanagetree ul:first-of-type li .jstree-icon:empty {
+    width: 40px;
+    background: url("../images/icon_page.gif") no-repeat;
+    background-position-y: 4px;
+}
+
+#modulemanagetree ul li ul:first-of-type li .jstree-icon:empty {
+    width: 40px;
+    background: url("");
+}
+
+.jstree-default .jstree-themeicon {
+    display: none;
+}
+
+#modulemanagetree ul li ul li ul li .jstree-wholerow {
+    margin-left: 20px;
+    background: url("");
+
+}
+
+#modulemanagetree ul li ul li ul li {
+    margin-left: 18px;
+
+}

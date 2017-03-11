@@ -171,67 +171,93 @@
                     },
                     check_callback: true,
 
-                    data: [
+                    'data': function (node, callback) {
 
-                        {"id": "senddoc", "parent": "#", "text": "发文管理", a_attr: {'href': '111.html'}},
+                        var    result = [
                         {
-                            "id": "qicaofawen",
-                            "parent": "senddoc",
-                            "text": "起草发文",
-                            a_attr: {'href': 'www.tansun.com.cn'},
-                            "children": false
+                            "id": "gwgl",
+                                "parent": "0",
+                                "text": "公文管理",
+                                "url": "",
+                                "target": ""
                         },
-
-                        {"id": "daiban", "parent": "senddoc", "text": "待 办 ", a_attr: {'href': 'daiban.html'}},
                         {
-                            "id": "daidenji",
-                            "parent": "daiban",
-                            "text": "待登记 ", a_attr: {'href': ''},
-                            "children": true
+                            "id": "fwgl",
+                                "parent": "gwgl",
+                                "text": "发文管理",
+                                "url": "",
+                                "target": ""
                         },
-                        {"id": "daipaiban", "parent": "daiban", "text": "待排版 ", a_attr: {'href': ''}},
-                        {"id": "daigaizhang", "parent": "daiban", "text": "待盖章 ", a_attr: {'href': ''}},
-                        {"id": "daifasong", "parent": "daiban", "text": "待发送 ", a_attr: {'href': ''}},
+                        {
+                            "id": "qcfw",
+                                "parent": "fwgl",
+                                "text": "起草发文",
+                                "url": "exampleUrl",
+                                "target": "content"
+                        },
+                        {
+                            "id": "fwdb",
+                                "parent": "fwgl",
+                                "text": "待办",
+                                "url": "exampleUrl",
+                                "target": "_blank"
+                        },
+                        {
+                            "id": "swgl",
+                                "parent": "gwgl",
+                                "text": "收文管理",
+                                "url": "",
+                                "target": ""
+                        },
+                        {
+                            "id": "bmsw",
+                                "parent": "swgl",
+                                "text": "部门收文",
+                                "url": "",
+                                "target": "content"
+                        },
+                        {
+                            "id": "xzbg",
+                                "parent": "0",
+                                "text": "行政办公",
+                                "url": "",
+                                "target": ""
+                        },
+                        {
+                            "id": "hygl",
+                                "parent": "xzbg",
+                                "text": "会议管理",
+                                "url": "",
+                                "target": ""
+                        },
+                        {
+                            "id": "hyqc",
+                                "parent": "hygl",
+                                "text": "起草",
+                                "url": "",
+                                "target": "_blank"
+                        }
+                        ];
+                        console.log(result.length);
 
-                        {"id": "jinban", "parent": "senddoc", "text": "经 办", a_attr: {'href': ''}},
-                        {"id": "benhang", "parent": "senddoc", "text": "本行发文 ", a_attr: {'href': ''}},
-                        {"id": "andaizi", "parent": "benhang", "text": "按代字 ", a_attr: {'href': ''}},
-                        {"id": "anqianfa", "parent": "benhang", "text": "按签发 ", a_attr: {'href': ''}},
-                        {"id": "anzhuban", "parent": "benhang", "text": "按主办 ", a_attr: {'href': ''}},
+                        var menus = [];
+                        for (var i = 0; i<result.length;i++){
+                            menus[i] = {
+                                "id":result[i].id,
+                                "parent":result[i].parent==="0"?"#":result[i].parent,
+                                "text":result[i].text,
+                                "a_attr":{
+                                   href: result[i].url,
+                                    target:result[i].target
+                                }
 
-                        {"id": "fawendengji", "parent": "senddoc", "text": "发文登记簿", a_attr: {'href': ''}},
-                        {"id": "fawenandai", "parent": "fawendengji", "text": "按代字", a_attr: {'href': ''}},
-                        {"id": "fawenanqian", "parent": "fawendengji", "text": "按签发", a_attr: {'href': ''}},
-                        {"id": "fawenanzhu", "parent": "fawendengji", "text": "按主办", a_attr: {'href': ''}},
-                        {"id": "huoshoujilu", "parent": "fawendengji", "text": "收回记录", a_attr: {'href': ''}},
+                            }
+                        }
 
-                        {"id": "fanwendenji", "parent": "senddoc", "text": "翻印登记簿", a_attr: {'href': ''}},
-                        {"id": "zhifadenji", "parent": "senddoc", "text": "直发登记簿", a_attr: {'href': ''}},
-                        {"id": "tuiwendenji", "parent": "senddoc", "text": "退文记录", a_attr: {'href': ''}},
-                        {"id": "canshupeizhi", "parent": "senddoc", "text": "参数配置 ", a_attr: {'href': ''}},
-                        {"id": "jibenpeizi", "parent": "canshupeizhi", "text": "基本配置 ", a_attr: {'href': ''}},
-                        {"id": "gongwenzhonglei", "parent": "canshupeizhi", "text": "公文种类 ", a_attr: {'href': ''}},
-                        {"id": "fangzhengword", "parent": "canshupeizhi", "text": "方正Word宏模板 ", a_attr: {'href': ''}},
-                        {"id": "huiqianshuoming", "parent": "canshupeizhi", "text": " 会签情况说明模板", a_attr: {'href': ''}},
-                        {"id": "wenhaoweihu", "parent": "canshupeizhi", "text": "文号维护 ", a_attr: {'href': ''}},
+                        callback.call(this,menus );
 
-
-                        {"id": "getdoc", "parent": "#", "text": "收文管理", a_attr: {'href': ''}},
-                        {"id": "getdocdaidengji", "parent": "getdoc", "text": "待登记", a_attr: {'href': ''}},
-                        {"id": "getdocdaiban", "parent": "getdoc", "text": "待办", a_attr: {'href': ''}},
-                        {"id": "getdocjingban", "parent": "getdoc", "text": "经办", a_attr: {'href': ''}},
-                        {"id": "getdocbumenshouwen", "parent": "getdoc", "text": "部门收文 ", a_attr: {'href': ''}},
-                        {"id": "getdocbumendenjibo", "parent": "getdoc", "text": "部门收文登记簿 ", a_attr: {'href': ''}},
-                        {"id": "getdocshouwendenjibo", "parent": "getdoc", "text": "收文登记簿", a_attr: {'href': ''}},
-                        {"id": "getdoczhifadenjibo", "parent": "getdoc", "text": "直发登记簿", a_attr: {'href': ''}},
-                        {"id": "getdoctuiwendenjibo", "parent": "getdoc", "text": "退文登记簿", a_attr: {'href': ''}},
-                        {"id": "getdoccanshupeizhi", "parent": "getdoc", "text": "参数配置", a_attr: {'href': ''}},
-
-
-                        {"id": "hanbo", "parent": "#", "text": "签报管理", a_attr: {'href': ''}},
-                        {"id": "hanjian", "parent": "#", "text": "函件管理", a_attr: {'href': ''}},
-                        {"id": "doban", "parent": "#", "text": "督办管理", a_attr: {'href': ''}}
-                    ]
+                        console.log(JSON.stringify(menus))
+                    }
                 },
                 plugins: ["wholerow", "contextmenu", "themes"],
                 "contextmenu": {
@@ -270,7 +296,7 @@
 
         init();
 
-
+console.log()
     }
 </script>
 
