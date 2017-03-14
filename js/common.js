@@ -11,16 +11,16 @@
     'use strict';
 
     /**
-     * ajax»ñÈ¡xmlĞÅÏ¢
-     * @param url   ·ÃÎÊµØÖ·
-     * @param fn    ³É¹¦ºóµÄ»Øµ÷º¯Êı
+     * ajaxè·å–xmlä¿¡æ¯
+     * @param url   è®¿é—®åœ°å€
+     * @param fn    æˆåŠŸåçš„å›è°ƒå‡½æ•°
      * @returns {*} XHR
      */
     function ajaxGetResult() {
         var url, fn, async, dataType;
 
         function error() {
-            alert("ÏµÍ³´íÎó£¬ÇëÁªÏµÏµÍ³¹ÜÀíÔ±");
+            alert("ç³»ç»Ÿé”™è¯¯ï¼Œè¯·è”ç³»ç³»ç»Ÿç®¡ç†å‘˜");
         }
 
         url = arguments[0];
@@ -72,28 +72,28 @@
     }
 
     /**
-     * ±È½ÏÁ½¸öÊ±¼äµÄ´óĞ¡£¬Èç¹ûºóÃæÈÕÆÚ´ó£¬Ôò·µ»Ø1£¬·ñÔò·µ»Ø0
-     * @param yr1   ÈÕÆÚ1µÄÄê
-     * @param mh1         ÔÂ
-     * @param dy1         ÈÕ
-     * @param hr1         Ê±
-     * @param mt1         ·Ö
-     * @param sd1         Ãë
-     * @param yr2   ÈÕÆÚ2µÄÄê
-     * @param mh2         ÔÂ
-     * @param dy2         ÈÕ
-     * @param hr2         Ê±
-     * @param mt2         ·Ö
-     * @param sd2         Ãë
+     * æ¯”è¾ƒä¸¤ä¸ªæ—¶é—´çš„å¤§å°ï¼Œå¦‚æœåé¢æ—¥æœŸå¤§ï¼Œåˆ™è¿”å›1ï¼Œå¦åˆ™è¿”å›0
+     * @param yr1   æ—¥æœŸ1çš„å¹´
+     * @param mh1         æœˆ
+     * @param dy1         æ—¥
+     * @param hr1         æ—¶
+     * @param mt1         åˆ†
+     * @param sd1         ç§’
+     * @param yr2   æ—¥æœŸ2çš„å¹´
+     * @param mh2         æœˆ
+     * @param dy2         æ—¥
+     * @param hr2         æ—¶
+     * @param mt2         åˆ†
+     * @param sd2         ç§’
      * @returns {number}
      */
     function newCompareTime1AndTime2(yr1, mh1, dy1, hr1, mt1, sd1, yr2, mh2, dy2, hr2, mt2, sd2) {
-        var t1, t2; // ÉùÃ÷±äÁ¿¡£
+        var t1, t2; // å£°æ˜å˜é‡ã€‚
 
-        t1 = Date.UTC(yr1, mh1 - 1, dy1, hr1, mt1, sd1); // »ñÈ¡´Ó 1/1/1970 ¿ªÊ¼µÄºÁÃëÊı¡£
-        t2 = Date.UTC(yr2, mh2 - 1, dy2, hr2, mt2, sd2); // »ñÈ¡´Ó 1/1/1970 ¿ªÊ¼µÄºÁÃëÊı¡£
+        t1 = Date.UTC(yr1, mh1 - 1, dy1, hr1, mt1, sd1); // è·å–ä» 1/1/1970 å¼€å§‹çš„æ¯«ç§’æ•°ã€‚
+        t2 = Date.UTC(yr2, mh2 - 1, dy2, hr2, mt2, sd2); // è·å–ä» 1/1/1970 å¼€å§‹çš„æ¯«ç§’æ•°ã€‚
 
-        // ·µ»Ø²î¡£
+        // è¿”å›å·®ã€‚
         if (t2 >= t1)
             return (1);
         else
@@ -103,9 +103,9 @@
     }
 
     /**
-     * ¶ÔDateµÄÀ©Õ¹£¬½« Date ×ª»¯ÎªÖ¸¶¨¸ñÊ½µÄString
-     * @param fmt   ÔÂ(M)¡¢ÈÕ(d)¡¢Ğ¡Ê±(h)¡¢·Ö(m)¡¢Ãë(s)¡¢¼¾¶È(q) ¿ÉÒÔÓÃ 1-2 ¸öÕ¼Î»·û£¬
-     *              Äê(y)¿ÉÒÔÓÃ 1-4 ¸öÕ¼Î»·û£¬ºÁÃë(S)Ö»ÄÜÓÃ 1 ¸öÕ¼Î»·û(ÊÇ 1-3 Î»µÄÊı×Ö)
+     * å¯¹Dateçš„æ‰©å±•ï¼Œå°† Date è½¬åŒ–ä¸ºæŒ‡å®šæ ¼å¼çš„String
+     * @param fmt   æœˆ(M)ã€æ—¥(d)ã€å°æ—¶(h)ã€åˆ†(m)ã€ç§’(s)ã€å­£åº¦(q) å¯ä»¥ç”¨ 1-2 ä¸ªå ä½ç¬¦ï¼Œ
+     *              å¹´(y)å¯ä»¥ç”¨ 1-4 ä¸ªå ä½ç¬¦ï¼Œæ¯«ç§’(S)åªèƒ½ç”¨ 1 ä¸ªå ä½ç¬¦(æ˜¯ 1-3 ä½çš„æ•°å­—)
      * @returns {*}
      * @constructor Date
      * @example
@@ -114,14 +114,14 @@
      */
     Date.prototype.Format = function (fmt) { // author: meizz
         var o = {
-            "M+": this.getMonth() + 1, // ÔÂ·İ
-            "d+": this.getDate(), // ÈÕ
-            "h+": this.getHours(), // Ğ¡Ê±
-            "m+": this.getMinutes(), // ·Ö
-            "s+": this.getSeconds(), // Ãë
-            "q+": Math.floor((this.getMonth() + 3) / 3), // ¼¾¶È
+            "M+": this.getMonth() + 1, // æœˆä»½
+            "d+": this.getDate(), // æ—¥
+            "h+": this.getHours(), // å°æ—¶
+            "m+": this.getMinutes(), // åˆ†
+            "s+": this.getSeconds(), // ç§’
+            "q+": Math.floor((this.getMonth() + 3) / 3), // å­£åº¦
             "S": this.getMilliseconds()
-            // ºÁÃë
+            // æ¯«ç§’
         };
         if (/(y+)/.test(fmt))
             fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "")
@@ -133,9 +133,9 @@
     };
 
     /**
-     * µÃµ½ÈÕÆÚÄêÔÂÈÕµÈ¼ÓÊı×ÖºóµÄÈÕÆÚ
-     * @param interval  Äê(y)¡¢¼¾¶È(q)¡¢ÔÂ(m)¡¢ÖÜ(w)¡¢ÈÕ(d)¡¢Ğ¡Ê±(h)¡¢·Ö(n)¡¢Ãë(s)¡¢ºÁÃë(ms) ¿ÉÒÔÓÃ 1-2 ¸öÕ¼Î»·û
-     * @param number    Ôö¼ÓµÄÊıÖµ
+     * å¾—åˆ°æ—¥æœŸå¹´æœˆæ—¥ç­‰åŠ æ•°å­—åçš„æ—¥æœŸ
+     * @param interval  å¹´(y)ã€å­£åº¦(q)ã€æœˆ(m)ã€å‘¨(w)ã€æ—¥(d)ã€å°æ—¶(h)ã€åˆ†(n)ã€ç§’(s)ã€æ¯«ç§’(ms) å¯ä»¥ç”¨ 1-2 ä¸ªå ä½ç¬¦
+     * @param number    å¢åŠ çš„æ•°å€¼
      * @returns {Date}
      */
     Date.prototype.dateAdd = function (interval, number) {
@@ -161,9 +161,9 @@
     };
 
     /**
-     * ¼ÆËãÁ½ÈÕÆÚÏà²îµÄÈÕÆÚÄêÔÂÈÕµÈ
-     * @param interval  Äê(y)¡¢¼¾¶È(q)¡¢ÔÂ(m)¡¢ÖÜ(w)¡¢ÈÕ(d)¡¢Ğ¡Ê±(h)¡¢·Ö(n)¡¢Ãë(s)¡¢ºÁÃë(ms) ¿ÉÒÔÓÃ 1-2 ¸öÕ¼Î»·û
-     * @param objDate2  ±È½ÏµÄÈÕÆÚ
+     * è®¡ç®—ä¸¤æ—¥æœŸç›¸å·®çš„æ—¥æœŸå¹´æœˆæ—¥ç­‰
+     * @param interval  å¹´(y)ã€å­£åº¦(q)ã€æœˆ(m)ã€å‘¨(w)ã€æ—¥(d)ã€å°æ—¶(h)ã€åˆ†(n)ã€ç§’(s)ã€æ¯«ç§’(ms) å¯ä»¥ç”¨ 1-2 ä¸ªå ä½ç¬¦
+     * @param objDate2  æ¯”è¾ƒçš„æ—¥æœŸ
      * @returns {Number}
      */
     Date.prototype.dateDiff = function (interval, objDate2) {
@@ -185,8 +185,8 @@
 
     if (typeof String.prototype.startsWith != 'function') {
         /**
-         * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÒÔÃş¸ö×Ö·û´®¿ªÍ·
-         * @param prefix    ×Ö·û´®
+         * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä»¥æ‘¸ä¸ªå­—ç¬¦ä¸²å¼€å¤´
+         * @param prefix    å­—ç¬¦ä¸²
          * @returns {boolean}
          */
         String.prototype.startsWith = function (prefix) {
@@ -196,8 +196,8 @@
 
     if (typeof String.prototype.endsWith != 'function') {
         /**
-         * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÒÔÃş¸ö×Ö·û´®½áÎ²
-         * @param suffix    ×Ö·û´®
+         * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä»¥æ‘¸ä¸ªå­—ç¬¦ä¸²ç»“å°¾
+         * @param suffix    å­—ç¬¦ä¸²
          * @returns {boolean}
          */
         String.prototype.endsWith = function (suffix) {
@@ -206,8 +206,8 @@
     }
     if (typeof Number.prototype.toFixed != 'function') {
         /**
-         * Ö¸¶¨±£ÁôµÄĞ¡ÊıÎ»Êı
-         * @param n Î»Êı
+         * æŒ‡å®šä¿ç•™çš„å°æ•°ä½æ•°
+         * @param n ä½æ•°
          * @returns {number}
          */
         Number.prototype.toFixed = function (n) {
@@ -217,8 +217,8 @@
     }
 
     /**
-     * url²éÑ¯Ìõ¼ş¶ÔÏó
-     * @param url   Á¬½ÓµØÖ·
+     * urlæŸ¥è¯¢æ¡ä»¶å¯¹è±¡
+     * @param url   è¿æ¥åœ°å€
      * @constructor Object
      */
     var QueryString = function (url) {
@@ -228,7 +228,7 @@
 
     QueryString.prototype = {
         /**
-         * ³õÊ¼»¯²ÎÊı¶ÔÏó£¬Ä¬ÈÏ¶Ôµ±Ç°URL½øĞĞ´¦Àí
+         * åˆå§‹åŒ–å‚æ•°å¯¹è±¡ï¼Œé»˜è®¤å¯¹å½“å‰URLè¿›è¡Œå¤„ç†
          * @param param RUL
          * @returns {QueryString}
          */
@@ -259,11 +259,11 @@
             return this;
         },
         /**
-         * ½«²ÎÊı¶ÔÏó×ª»»³É×Ö·û´®
+         * å°†å‚æ•°å¯¹è±¡è½¬æ¢æˆå­—ç¬¦ä¸²
          * @param options
          * {
-		 *  hash    ÊÇ·ñ´øÓĞµ±Ç°ä¯ÀÀÆ÷µÄÃªµã²ÎÊı
-		 *  traditional ÊÇ·ñÎª´«Í³×ª»»
+		 *  hash    æ˜¯å¦å¸¦æœ‰å½“å‰æµè§ˆå™¨çš„é”šç‚¹å‚æ•°
+		 *  traditional æ˜¯å¦ä¸ºä¼ ç»Ÿè½¬æ¢
 		 * }
          * @returns {string}
          */
@@ -284,10 +284,10 @@
             return result;
         },
         /**
-         * ÉèÖÃ²ÎÊı
-         * @param k ²ÎÊıÃû
-         * @param v ²ÎÊıÖµ
-         * @param replace   ÊÇ·ñÌæ»»
+         * è®¾ç½®å‚æ•°
+         * @param k å‚æ•°å
+         * @param v å‚æ•°å€¼
+         * @param replace   æ˜¯å¦æ›¿æ¢
          * @returns {QueryString}
          */
         set: function (k, v, replace) {
@@ -310,16 +310,16 @@
             return this;
         },
         /**
-         * »ñÈ¡²ÎÊıÖµ
-         * @param k ²ÎÊıÃû³Æ
+         * è·å–å‚æ•°å€¼
+         * @param k å‚æ•°åç§°
          * @returns {*}
          */
         get: function (k) {
             return this.urlParams[k];
         },
         /**
-         * É¾³ı²ÎÊı
-         * @param k ²ÎÊıÃû³Æ
+         * åˆ é™¤å‚æ•°
+         * @param k å‚æ•°åç§°
          * @returns {QueryString}
          */
         remove: function (k) {
@@ -333,8 +333,8 @@
     var curUserGW;
 
     /**
-     * ÅĞ¶Ïµ±Ç°ÓÃ»§ÊÇ·ñ°üº¬Ä³¸ö¸ÚÎ»
-     * @param name  ¸ÚÎ»Ãû³Æ
+     * åˆ¤æ–­å½“å‰ç”¨æˆ·æ˜¯å¦åŒ…å«æŸä¸ªå²—ä½
+     * @param name  å²—ä½åç§°
      * @returns {boolean}
      */
     function includGW(name) {
@@ -345,8 +345,8 @@
     var userRoles;
 
     /**
-     * ÅĞ¶Ïµ±Ç°ÓÃ»§ÊÇ·ñ°üº¬Ä³¸öÈ¨ÏŞ
-     * @param name  È¨ÏŞÃû³Æ(ACLÃû³Æ)
+     * åˆ¤æ–­å½“å‰ç”¨æˆ·æ˜¯å¦åŒ…å«æŸä¸ªæƒé™
+     * @param name  æƒé™åç§°(ACLåç§°)
      * @returns {boolean}
      */
     function includRole(name) {
@@ -355,9 +355,9 @@
     }
 
     /**
-     * »ñÈ¡XML½ÚµãÁĞ±í
-     * @param node  ²Ù×÷ÎÄµµ
-     * @param str   Ñ¡ÔñÆ÷
+     * è·å–XMLèŠ‚ç‚¹åˆ—è¡¨
+     * @param node  æ“ä½œæ–‡æ¡£
+     * @param str   é€‰æ‹©å™¨
      * @returns {*|jQuery}
      */
     //  function selectNodes(node, str) {
@@ -366,9 +366,9 @@
     //  }
 
     /**
-     * »ñÈ¡XMLµ¥¸ö
-     * @param node    ²Ù×÷ÎÄµµ
-     * @param str   Ñ¡ÔñÆ÷
+     * è·å–XMLå•ä¸ª
+     * @param node    æ“ä½œæ–‡æ¡£
+     * @param str   é€‰æ‹©å™¨
      * @returns {*|jQuery}
      */
     //  function selectSingleNode(node, str) {
@@ -377,7 +377,7 @@
     //  };
 
     /**
-     * ½«strB´ÓstrAÖĞÉ¾³ı
+     * å°†strBä»strAä¸­åˆ é™¤
      * @param strA
      * @param strB
      * @returns {String}
@@ -387,8 +387,8 @@
     }
 
     /**
-     * È¥µôÊı×éÖĞµÄÖØ¸´ÔªËØ
-     * @param arr    ´ı´¦ÀíÊı×é
+     * å»æ‰æ•°ç»„ä¸­çš„é‡å¤å…ƒç´ 
+     * @param arr    å¾…å¤„ç†æ•°ç»„
      * @returns {Array}
      */
     function FilterArray(arr) {
@@ -404,8 +404,8 @@
     }
 
     /**
-     * ½«×Ö·û´®×ª»»Îªunicode±àÂë
-     * @param sstr  ×Ö·û´®
+     * å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºunicodeç¼–ç 
+     * @param sstr  å­—ç¬¦ä¸²
      * @returns {String}
      */
     function getUnicodeString(sstr) {
@@ -417,8 +417,8 @@
     }
 
     /**
-     * ½«Unicode×ª»»³É×Ö·û´®
-     * @param codeStr  Unicode±àÂë
+     * å°†Unicodeè½¬æ¢æˆå­—ç¬¦ä¸²
+     * @param codeStr  Unicodeç¼–ç 
      * @returns {String}
      */
     function UnicodeToStr(codeStr) {
@@ -431,7 +431,7 @@
     }
 
     /**
-     * ÅĞ¶ÏIEÖ§³ÖµÄXML¶ÔÏó
+     * åˆ¤æ–­IEæ”¯æŒçš„XMLå¯¹è±¡
      * @returns {string}
      * @constructor
      */
@@ -450,7 +450,7 @@
     }
 
     /**
-     * XML¼ÓÔØ
+     * XMLåŠ è½½
      * @param  {[type]} url [description]
      * @return {[type]}       [description]
      */
@@ -458,10 +458,10 @@
         var xmlDom = null;
         if (typeof(xmlFile) === 'string') {
             if (xmlFile.substr(0, 1) === '<') {
-                if (!!window.ActiveXObject || 'ActiveXObject' in window) { //Ö§³ÖIEä¯ÀÀÆ÷£¬¿É¿çÓò
+                if (!!window.ActiveXObject || 'ActiveXObject' in window) { //æ”¯æŒIEæµè§ˆå™¨ï¼Œå¯è·¨åŸŸ
                     xmlDom = new ActiveXObject('Microsoft.XMLDOM');
                     xmlDom.async = false;
-                    xmlDom.loadXML(xmlFile); //Èç¹ûÓÃµÄÊÇxmlÎÄ¼ş¡£
+                    xmlDom.loadXML(xmlFile); //å¦‚æœç”¨çš„æ˜¯xmlæ–‡ä»¶ã€‚
                     return xmlDom;
                 } else {
                     var parseXml = new DOMParser();
@@ -469,12 +469,12 @@
                 }
             } else {
                 try {
-                    if (!!window.ActiveXObject || 'ActiveXObject' in window) { //Ö§³ÖIEä¯ÀÀÆ÷£¬¿É¿çÓò
+                    if (!!window.ActiveXObject || 'ActiveXObject' in window) { //æ”¯æŒIEæµè§ˆå™¨ï¼Œå¯è·¨åŸŸ
                         xmlDom = new ActiveXObject('Microsoft.XMLDOM');
                         xmlDom.async = false;
-                        xmlDom.load(xmlFile); //Èç¹ûÓÃµÄÊÇxmlÎÄ¼ş¡£
+                        xmlDom.load(xmlFile); //å¦‚æœç”¨çš„æ˜¯xmlæ–‡ä»¶ã€‚
                         return xmlDom;
-                    } else if (document.implementation && document.implementation.createDocument) { //Ö§³Ö»ğºüä¯ÀÀÆ÷£¬¿É¿çÓò
+                    } else if (document.implementation && document.implementation.createDocument) { //æ”¯æŒç«ç‹æµè§ˆå™¨ï¼Œå¯è·¨åŸŸ
                         xmlDom = document.implementation.createDocument('', '', null);
                         xmlDom.async = false;
                         xmlDom.load(xmlFile);
@@ -494,11 +494,11 @@
     }
 
     /**
-     * ÒÔXSL×ª»»XML
+     * ä»¥XSLè½¬æ¢XML
      * @param  {[type]} xmlpath     [description]
      * @param  {[type]} xslpath     [description]
-     * @param  {[type]} orderColumn [ÅÅĞò×Ö¶Î]
-     * @param  {[type]} type        [ÅÅĞò·½Ê½]
+     * @param  {[type]} orderColumn [æ’åºå­—æ®µ]
+     * @param  {[type]} type        [æ’åºæ–¹å¼]
      * @return {[type]}             [description]
      */
     function transformNode(xmlpath, xslpath, orderColumn, type) {
@@ -539,9 +539,9 @@
     }
 
     /**
-     * Ñ¡È¡Ñ¡ÖĞ¸´Ñ¡¿ò
-     * @param checkname  checkboxµÄnameÖµ
-     * @param selectstr  checkboxµÄvalueÖµ ,ÀıÈç:"name;age;sex;"
+     * é€‰å–é€‰ä¸­å¤é€‰æ¡†
+     * @param checkname  checkboxçš„nameå€¼
+     * @param selectstr  checkboxçš„valueå€¼ ,ä¾‹å¦‚:"name;age;sex;"
      */
     function SelectCheck(checkname, selectstr) {
         var chks = document.getElementsByName(checkname),
@@ -558,7 +558,7 @@
     }
 
     /**
-     * Ñ¡ÔñÒ³ÃædomÔªËØ
+     * é€‰æ‹©é¡µé¢domå…ƒç´ 
      * @param str  name/id
      * @returns {*}
      * @constructor
@@ -575,14 +575,14 @@
                 return list;
             }
             if (!list[0] && window.console && console.warn) {
-                console.warn('Î´Ñ¡ÖĞÒ³ÃæÔªËØ£º' + str);
+                console.warn('æœªé€‰ä¸­é¡µé¢å…ƒç´ ï¼š' + str);
             }
             return list[0];
         }
     }
 
     /**
-     * Ñ­»·»ñÈ¡×ÓÒ³ÃæÖĞµÄÔªËØ
+     * å¾ªç¯è·å–å­é¡µé¢ä¸­çš„å…ƒç´ 
      * @param list
      * @param document
      * @returns {*}
@@ -599,7 +599,7 @@
     }
 
     /**
-     * ÔªËØÑ¡Ôñ
+     * å…ƒç´ é€‰æ‹©
      * @param str
      * @returns {*}
      * @constructor
@@ -612,7 +612,7 @@
     }
 
     /**
-     * »ñÈ¡openerÖĞµÄÔªËØ
+     * è·å–openerä¸­çš„å…ƒç´ 
      * @param str
      * @returns {*}
      */
@@ -623,7 +623,7 @@
     }
 
     /**
-     * »ñÈ¡¸¸½ÚµãµÄopenerÖĞµÄÔªËØ
+     * è·å–çˆ¶èŠ‚ç‚¹çš„openerä¸­çš„å…ƒç´ 
      * @param str
      * @returns {*}
      */
@@ -634,7 +634,7 @@
     }
 
     /**
-     * ¹Ø±Õµ±Ç°´°¿Ú
+     * å…³é—­å½“å‰çª—å£
      */
     function close() {
         var target;
@@ -650,18 +650,18 @@
     }
 
     /**
-     * ±£´æÕıÎÄ&¸½¼ş pengte 20170113
+     * ä¿å­˜æ­£æ–‡&é™„ä»¶ pengte 20170113
      */
     function saveWordAndAtteach() {
-        //±£´æÕıÎÄ
+        //ä¿å­˜æ­£æ–‡
         $("#tabZW").contents().find("#btn_saveWordDoc").click();
-        //±£´æ¸½¼ş
+        //ä¿å­˜é™„ä»¶
         $("#tabATT").contents().find("#btn_SaveAttachDoc").click();
     }
 
     /**
-     * ´òÓ¡Á÷³ÌĞÅÏ¢
-     * @param id ´òÓ¡ÔªËØID
+     * æ‰“å°æµç¨‹ä¿¡æ¯
+     * @param id æ‰“å°å…ƒç´ ID
      * @returns {*}
      * @constructor
      */
@@ -678,7 +678,7 @@
     }
 
     /**
-     * ´Ó¾ø¶ÔµØÖ·ÖĞµÃµ½Ó¦ÓÃÎÄµµµÄÎ¨Ò»ID
+     * ä»ç»å¯¹åœ°å€ä¸­å¾—åˆ°åº”ç”¨æ–‡æ¡£çš„å”¯ä¸€ID
      * @returns {*}
      */
     function getunid() {
@@ -690,14 +690,14 @@
     }
 
     /**
-     * ½ûÖ¹»Ø³µ»»ĞĞ
+     * ç¦æ­¢å›è½¦æ¢è¡Œ
      * @returns {*}
      */
     function keyenter(event) {
         event = event || window.event;
         if (event.keyCode == 13) {
             event.returnValue = false;
-            alert("½ûÖ¹»Ø³µ»»ĞĞ")
+            alert("ç¦æ­¢å›è½¦æ¢è¡Œ")
             $(this).val('').focus();
         }
     }
@@ -730,13 +730,13 @@
 
     $(function () {
         /**
-         * ¹«¹²ÓòĞÅÏ¢»ñÈ¡
+         * å…¬å…±åŸŸä¿¡æ¯è·å–
          */
-            //µ±Ç°ÓÃ»§¸ÚÎ»
+            //å½“å‰ç”¨æˆ·å²—ä½
         curUserGW = $('[name=CurUserGW]').val();
-        //µ±Ç°ÓÃ»§È¨ÏŞ
+        //å½“å‰ç”¨æˆ·æƒé™
         userRoles = $('[name=userRoles]').val();
-        //µ±Ç°ÈÕÆÚ
+        //å½“å‰æ—¥æœŸ
         var today = $('[name=today]').val();
         $.extend(E, {
             DataBase: $('[name=DataBase]').val(),
