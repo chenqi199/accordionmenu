@@ -49,14 +49,19 @@ function modulemanager() {
 
                 'data': function (node, callback) {
 
-                    var url = 'http://hqoakf.adbc.com.cn/ADBCWEBOAZH/WEBOA_HOMEPAGE.NSF/agGetMenuINFOjson?openagent' +
-                        ' &FileKey=sendfile ' +
-                        '&CurUserGW=#D126940325|' +
-                        ' &CurUserDept=信息科技部 ' +
-                        '&CurUnitType=总行';
-                    var    result = E.ajaxGetResult(url, true, 'json');
 
-                    var menus =getmenus(result.ViewData,'sendfile');
+                    var url = 'agGetMenuINFOjson?openagent&FileKey=sendfile&CurUserGW=#D126940325|&CurUserDept=信息科技部CurUnitType=总行';
+                    var    result = E.ajaxGetResult(url, false,'text');
+                    var   jsondata = result.substring(result.indexOf("{"),result.lastIndexOf("}]}")+3);
+
+                    try{
+                        var mymenus= JSON.parse(jsondata);
+                        var menus= getmenus(mymenus.ViewData,'sendfile')
+                    }catch (e){
+                        console.log(e)
+                    }
+                    //  var menus =getmenus(result.innerHTML,'sendfile');
+
 
                     callback.call(this,menus );
                 }
