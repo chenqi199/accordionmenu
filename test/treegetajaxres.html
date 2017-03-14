@@ -54,7 +54,27 @@
 
 
 <script type="text/javascript">
+    function getmenus(jsonMenus,parent){//获取二级节点为根节点
+        var menus = [];
 
+        for (var i = 0; i<jsonMenus.length;i++){
+            if (jsonMenus[i].id!=parent){
+                menus.push( {
+                    "id":jsonMenus[i].id,
+                    "parent":jsonMenus[i].parent===parent?"#":jsonMenus[i].parent,
+                    "text":jsonMenus[i].text,
+                    "a_attr":{
+                        href: result[i].url,
+                        target:result[i].target
+                    }
+                })
+
+            }
+
+        }
+        console.log(JSON.stringify(menus));
+        return menus;
+    }
 
     function modulemanager() {
 

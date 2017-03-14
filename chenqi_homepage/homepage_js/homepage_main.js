@@ -7,7 +7,7 @@
 
 
 function modulemanage() {
-    $("#leftdiv").load("navi_homepage_modulemanage_tree.html");
+    $("#leftdiv").load("navi_module_zs.html");
 }
 function docmanager() {
     $("#leftdiv").load("");
