@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>客户列表</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="dist/css/sm.css">
+<script src="js/zepto.min.js"></script>
+<script src="dist/js/sm.js"></script>
+<!--如果你用到了拓展包中的组件，还需要引用下面两个-->
+<link rel="stylesheet" type="text/css" href="dist/css/sm-extend.css">
+<script src="dist/js/sm-extend.js"></script>
+<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+<link rel="stylesheet" type="text/css" href="css/oa-style.css">
+<script type="text/javascript">
+	var basepath = "http://10.6.30.122:8080/crm/list.htm";	
+	var domURL = document.URL;
+	var aaa = "http://114.215.26.198:8080/crm/list.html?timestamp=1487232866&nonce=275807&login_name=test1&mx_sso_token=PgAAAGdm7_DjxP5PK0bj3qSd6_AaUDBI3RT_3Qij3tJBk14V&signed=Zzgrw7fRLVKzHW4pikJNDcNz6tI%3D";
+	var baseurl =  aaa.split('http://')[1].split('/')[0];
+	var login_name = aaa.split('login_name=')[1].split('&')[0];
+	var imgUrl = "http://"+baseurl +"/photos/watermark?loginname="+login_name;
+	
+	function init(){
+		var p_data = {};
+		$.ajax({
+			type:"post",
+			url:basepath,
+			async:true,
+			error:function(result){
+				alert(result);
+			},
+			success:function(result){
+				var data = eval(''+result+'');
+				var html = "";
+				for(var i=0;i<data.length;i++){
+					var list = data[i];
+        	 		var name = list.name;//姓名
+        	 		var id = list.id;
+        	 		var gender = list.gender;//性别
+        	 		var creater = "";//记录人
+        	 		if(list.creater){
+        	 			creater=list.creater
+        	 		};
+        	 		var grade = "";//客户等级
+        	 		if(list.grade){
+        	 			grade=list.grade
+        	 		};
+	        	 	var group = "";//客户群组
+	        	 	if(list.group){
+	        	 		group=list.group
+	        	 	};
+	        	 	html += '<li onclick="show('+id+')">'
+	                +'<a href="#" class="item-link item-content">'
+	                  +'<div class="item-inner">'
+	                    +'<div class="item-title-row">'
+	                      +'<div class="item-title">'+name+'</div>'
+	                    +'</div>'
+	                    +'<div class="item-subtitle"><span>性别：'+gender+'</span> <span class="item-info">记录人：'+creater+'</span></div>'
+	                    +'<div class="item-text"><label>客户等级：'+grade+'</label> <br><label>客户群组：'+group+'</label></div>'
+	                  +'</div>'
+	                +'</a>'
+	              +'</li>';
+	        	 }
+	            $('#list').append(html);					
+			}
+		});
+	}
+	init();
+	function show(id){
+		window.location.href = "detail.html?id="+id;
+	}
+</script>
+	
+</head>
+<body>
+<div class="page-group" >
+  <div class="page" id="background">
+  	<img  src=''+imgUrl+'' style="position:fixed; width:100%; height:100%;"/>
+  	<script>
+//		var div = document.getElementById('background');
+//		div.style.backgroundImage = 'https://www.baidu.com/img/bd_logo1.png';
+  	</script>
+    <header class="bar bar-nav">
+      <nav class="bar bar-nav bar-standard">
+  <h1 class="title">客户列表</h1>
+</nav>
+    </header>
+    <div class="fixed-add"><a class=" pull-right text-center" href='add.html'> <span class="icon icon-unie6d8"> </span> </a></div>
+    <div class="content"> 
+      <!-- 这里是页面内容区 -->
+          <div class="list-block media-list">
+            <ul id="list">
+            </ul>
+          </div>
+  
+    </div>
+  </div>
+  
+</div>
+</body>
+</tml>

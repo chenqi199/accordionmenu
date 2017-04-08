@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>客户详情</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="dist/css/sm.css">
+<script src="js/crm.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="dist/js/sm.js"></script>
+<!--如果你用到了拓展包中的组件，还需要引用下面两个-->
+<link rel="stylesheet" type="text/css" href="dist/css/sm-extend.css">
+<script src="dist/js/sm-extend.js"></script>
+<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+<link rel="stylesheet" type="text/css" href="css/oa-style.css">
+<script type="text/javascript">	
+	var domURL = document.URL;
+	var id = domURL.split('?id=')[1];
+	var basepath = "http://10.6.30.122:8080/crm/select.htm";
+	function init(){		
+		$.ajax({
+			type:"post",
+			url:basepath,
+			async:true,
+			data:{
+				id:id,
+			},
+			error:function(result){
+				alert(result);
+			},
+			success:function(result){
+				var data = JSON.parse(result);
+				$("#name").val(data.name);
+				$("#gender").val(data.gender);
+				$("#idcard").val(data.idcard);
+				$("#id").val(data.id);
+				if(data.address){
+					$("#address").val(data.address);
+				}
+				if(data.birth){
+					var birth =new Date(data.birth).Format("yyyy-MM-dd");
+					$("#birth").val(birth);
+					$("#birth").calendar({value:[birth]});
+				}
+				if(data.creater){
+					$("#creater").val(data.creater);
+				}
+				if(data.creationdate){
+					var creationdate =new Date(data.creationdate).Format("yyyy-MM-dd");
+					$("#creationdate").val(creationdate);
+					$("#birth").calendar({value:[creationdate]});
+				}
+				if(data.grade){
+					$("#grade").val(data.grade);
+				}
+				if(data.groupname){
+					$("#groupname").val(data.groupname);
+				}
+				if(data.mobile){
+					$("#mobile").val(data.mobile);
+				}
+				if(data.nation){
+					$("#nation").val(data.nation);
+				}
+				if(data.region){
+					$("#region").val(data.region);
+				}
+			}
+		});
+		
+	}
+	init();
+</script>
+</head>
+<body>
+<div class="page-group">
+  <div class="page">
+    <header class="bar bar-nav"> <a class="button button-link button-nav pull-left" href="list.html" > <span class="icon icon-unie937 f-white"></span> </a>
+      <nav class="bar bar-nav bar-standard">
+  <h1 class="title">客户详情</h1>
+</nav>
+    </header>
+    <nav class="fixed"><a class="button button-link button-nav pull-right " href="#" > <span class="icon icon-unie6d8 f-white"></span> </a></nav>
+    <div class="content"> 
+      <!-- 这里是页面内容区 -->
+        <div class="list-block">
+        	<form id="detail" action="#"> 
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">姓名<span style="color:red">*</span></div>
+                    <div class="item-input">
+                      <input type="text" id="name" placeholder="请输入姓名" name="name">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">性别<span style="color:red">*</span></div>
+                    <div class="item-input">
+                      <a href="#" class="gender"><input type="text" name="gender" id="gender" placeholder="请选择"></a>
+                      <input type="hidden"  id="id" name="id" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">民族</div>
+                    <div class="item-input">
+                      <input type="text" id="nation" name="nation" placeholder="请输入民族">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">生日</div>
+                    <div class="item-input">
+                      <input type="text" id='birth' name="birth" placeholder="请选择"/>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">地区</div>
+                    <div class="item-input">
+                      <input type="text" id="region"  name="region" placeholder="请输入地区">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">身份证号<span style="color:red">*</span></div>
+                    <div class="item-input">
+                      <input type="text" id="idcard" name="idcard" placeholder="请输入身份证号" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">手机号</div>
+                    <div class="item-input">
+                      <input type="text" id="mobile" name="mobile" placeholder="请输入手机号" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">地址</div>
+                    <div class="item-input">
+                       <input type="text" id="address" name="address" placeholder="请输入地址" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">记录人</div>
+                    <div class="item-input">
+                       <input type="text" id="creater" name="creater" placeholder="记录人" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">记录日期</div>
+                    <div class="item-input">
+                       <input type="text" id='creationdate' name="creationdate" placeholder="请选择"/>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">客户等级</div>
+                    <div class="item-input">
+                      <a href="#" class="grade"><input type="text" id="grade" name="grade" placeholder="请选择"></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">客户群组</div>
+                    <div class="item-input">
+                      <a href="#" class="groupname"><input type="text" id="groupname" name="groupname" placeholder="请选择"></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            </form> 	
+          </div>
+        <div class="content-block">
+        	<p><a href="#" class="button max-burron bg-white modify">修改</a></p>
+        	<p><a href="#" class="button max-burron bg-white delete">删除</a></p>
+    	</div>
+    </div>
+  </div>
+
+</div>
+<script>
+	$(document).on('click','.modify', function () {
+		$.confirm('是否确认修改?', function () {
+			var name = $("#name").val();
+        	if (name=="" || name==null) {
+         		$.alert("姓名不得为空");
+          		return;
+        	};
+        	var gender = $("#gender").val();
+        	if (gender=="" || gender==null) {
+          		$.alert("性别不得为空");
+          		return;
+        	};
+        	var idcard = $("#idcard").val();
+        	if (idcard=="" || idcard==null) {
+          		$.alert("身份证号不得为空");
+          		return;
+        	};
+        	var customer =  $("#detail").serialize();
+        	customer = decodeURI(customer);
+        	customer = strToObj(customer);
+        	var url = "http://10.6.30.122:8080/crm/modify.htm";
+			$.ajax({
+				type:"post",
+				url:url,
+				contentType:"application/x-www-form-urlencoded;charset=UTF-8",
+				data:{
+					customer:JSON.stringify(customer),
+				},
+				success:function(result){
+					$.alert("修改成功",function(){
+						window.location.href = "list.html";
+					});
+				},
+				error:function(result){
+					alert("error:"+result);
+				}
+			}); 
+        	
+	})
+	});
+	
+	$(document).on('click','.delete', function () {
+      $.confirm('是否确认删除?', function () {
+        	var url = "http://10.6.30.122:8080/crm/delete.htm";
+        	var id = $("#id").val();
+			$.ajax({
+				type:"post",
+				url:url,
+				contentType:"application/x-www-form-urlencoded;charset=UTF-8",
+				data:{
+					id:id,
+				},
+				success:function(result){
+					$.alert("删除成功",function(){
+						window.location.href = "list.html";
+					});
+				},
+				error:function(result){
+					alert("error:"+result);
+				}
+			}); 
+      });
+ });
+	$(document).on('click','.gender', function () {
+      var buttons1 = [
+        {
+          text: '性别',
+          label: true
+        },
+        {
+          text: '男',
+          onClick: function() {
+            $('#gender').val('男');
+          }
+        },
+        {
+          text: '女',
+          onClick: function() {
+              $('#gender').val('女');
+          }
+        }
+      ];
+      var buttons2 = [
+        {
+          text: '取消',
+          bg: 'danger'
+        }
+      ];
+      var groups = [buttons1, buttons2];
+      $.actions(groups);
+ });
+  $(document).on('click','.grade', function () {
+      var buttons1 = [
+        {
+          text: '客户等级',
+          label: true
+        },
+        {
+          text: '一级客户',
+          onClick: function() {
+            $('#grade').val('一级客户');
+          }
+        },
+        {
+          text: '二级客户',
+          onClick: function() {
+              $('#grade').val('二级客户');
+          }
+        },
+        {
+          text: '三级客户',
+          onClick: function() {
+              $('#grade').val('三级客户');
+          }
+        }
+      ];
+      var buttons2 = [
+        {
+          text: '取消',
+          bg: 'danger'
+        }
+      ];
+      var groups = [buttons1, buttons2];
+      $.actions(groups);
+  });
+  $(document).on('click','.groupname', function () {
+      var buttons1 = [
+        {
+          text: '客户群组',
+          label: true
+        },
+        {
+          text: 'A类客户',
+          onClick: function() {
+            $('#groupname').val('A类客户');
+          }
+        },
+        {
+          text: 'B类客户',
+          onClick: function() {
+              $('#groupname').val('B类客户');
+          }
+        }
+        ,
+        {
+          text: 'C类客户',
+          onClick: function() {
+              $('#groupname').val('C类客户');
+          }
+        }
+      ];
+      var buttons2 = [
+        {
+          text: '取消',
+          bg: 'danger'
+        }
+      ];
+      var groups = [buttons1, buttons2];
+      $.actions(groups);
+  });
+$("#birth").calendar({});
+$("#creationdate").calendar({});
+</script>
+<script src="dist/js/sm.js"></script>
+</body>
+</html>

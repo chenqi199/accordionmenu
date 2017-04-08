@@ -1,0 +1,313 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+.conbar {
+  height: 2.2rem;
+  z-index:20;
+  background-color: #ffffff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.conbar:after {
+  content: '';
+  right: auto;
+  top: auto;
+  height: 1px;
+  width: 100%;
+  background-color: #e7e7e7;
+  display: block;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+}
+.bg-white { background:#FFFFFF;}
+.tab-link {height:2.2rem; line-height:2.2rem}
+
+
+.icon-area { padding-top:0.2rem; padding-bottom:0.2rem;}
+.icon-area .tab-item{ position: relative;
+  display: table-cell;
+  width: 1%;
+  height: 6.0rem;
+  /*padding:1rem;*/
+  color: #929292;
+  text-align: center;
+  vertical-align: middle;}
+.icon-area .tab-item.active,
+.icon-area .tab-item:active {
+  color: #0894ec;
+}
+.icon-area .tab-item .badge {
+  position: absolute;
+  top: .1rem;
+  left: 50%;
+  z-index: 100;
+  height: .8rem;
+  min-width: .8rem;
+  padding: 0 .2rem;
+  font-size: .6rem;
+  line-height: .8rem;
+  color: white;
+  vertical-align: top;
+  background: red;
+  border-radius: .5rem;
+  margin-left: .1rem;
+}
+.icon-area .tab-item .icon {
+  font-size: 2.0rem;
+  line-height: 3.3rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.icon-area .tab-item .icon ~ .tab-label {
+  display: block;
+  font-size: 0.65rem;
+  position: relative;
+  top: 0.15rem;
+}
+
+.icon-area .col-25 .tab-item .icon {
+  font-size: 1.35rem;
+  line-height: 2.2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.circle-line { 
+width: 2.4rem; 
+height: 2.4rem; 
+border-radius: 2.4rem; 
+-moz-border-radius:2.4rem;
+-webkit-border-radius: 2.4rem; 
+border-color:#2abbb4 ;
+border-style:solid;
+border-width:1px;
+background-color: transparent; /* Can be set to transparent */ 
+} 
+.icon-area .col-25 .tab-item{ position: relative;
+  display: table-cell;
+  width: 1%;
+  height: 4.5rem;
+  /*padding:1rem;*/
+
+  color: #929292;
+  text-align: center;
+  vertical-align: middle;}
+.icon-area .tab-item.active,
+.icon-area .tab-item:active {
+  color: #0894ec;
+}
+.circle { 
+width: 3.3rem; 
+height: 3.3rem; 
+border-radius: 3.3rem; 
+-moz-border-radius:3.3rem;
+-webkit-border-radius: 3.3rem; 
+} 
+.circle2 { 
+width: 2.8rem; 
+height: 2.8rem; 
+border-radius: 2.8rem; 
+-moz-border-radius:2.8rem;
+-webkit-border-radius: 2.8rem; 
+} 
+
+.red { background:#e30a20; color:#FFFFFF}
+.red-light { background:#EF3F42; color:#FFFFFF}
+.pink {background:#f2395b; color:#FFFFFF}
+.pink-light {background:#e86ba2; color:#FFFFFF}
+.green {background:#169e49; color:#FFFFFF}
+.green-light {background:#4dcd70; color:#FFFFFF}
+.cyan {background:#009d95; color:#FFFFFF}
+.cyan-light {background:#2abbb4; color:#FFFFFF}
+.violet {background:#9b6aea; color:#FFFFFF}
+.purple {background:#911482; color:#FFFFFF}
+.orange {background:#f98700; color:#FFFFFF}
+.orange-light {background:#faa701; color:#FFFFFF}
+.gold {background:#ce9d40; color:#FFFFFF}
+.gold-light {background:#dac538; color:#FFFFFF}
+.blue { background:#006ab4; color:#FFFFFF}
+.blue-light { background:#38b7ea; color:#FFFFFF}
+.gary { background:#828999; color:#FFFFFF}
+.gary-light { background:#a3abbe; color:#FFFFFF}
+.yellow { background:#f9d602; color:#FFFFFF}
+.yellow-light { background:#f1f201; color:#FFFFFF}
+
+.f-white { color:#ffffff}
+.f-black { color:#111111}
+.f-red { color:#e30a20}
+.f-red-light { color:#EF3F42}
+.f-pink {color:#f2395b}
+.f-pink-light {color:#e86ba2}
+.f-green {color:#169e49}
+.f-green-light {color:#4dcd70}
+.f-cyan {color:#009d95}
+.f-cyan-light {color:#2abbb4}
+.f-violet {color:#9b6aea}
+.f-purple {color:#911482}
+.f-orange {color:#f98700}
+.f-orange-light {color:#faa701}
+.f-gold {color:#ce9d40}
+.f-gold-light {color:#dac538}
+.f-blue { color:#006ab4}
+.f-blue-light { color:#38b7ea}
+.f-gary { color:#828999}
+.f-gary-light { color:#a3abbe}
+.f-yellow { color:#f9d602}
+.f-yellow-light { color:#f1f201}
+
+.circle-line.l-white { border-color:#ffffff;}
+.circle-line.l-black { border-color:#111111}
+.circle-line.l-red { border-color:#e30a20}
+.circle-line.l-red-light { border-color:#EF3F42}
+.circle-line.l-pink {border-color:#f2395b}
+.circle-line.l-pink-light {border-color:#e86ba2}
+.circle-line.l-green {border-color:#169e49}
+.circle-line.l-green-light {border-color:#4dcd70}
+.circle-line.l-cyan {border-color:#009d95}
+.circle-line.l-cyan-light {border-color:#2abbb4}
+.circle-line.l-violet {border-color:#9b6aea}
+.circle-line.l-purple {border-color:#911482}
+.circle-line.l-orange {border-color:#f98700}
+.circle-line.l-orange-light {border-color:#faa701}
+.circle-line.l-gold {border-color:#ce9d40}
+.circle-line.l-gold-light {border-color:#dac538}
+.circle-line.l-blue { border-color:#006ab4}
+.circle-line.l-blue-light { border-color:#38b7ea}
+.circle-line.l-gary { border-color:#828999}
+.circle-line.l-gary-light { border-color:#a3abbe}
+.circle-line.l-yellow { border-color:#f9d602}
+.circle-line.l-yellow-light { border-color:#f1f201}
+
+.list-block .item-title {
+  -webkit-flex-shrink: 1;
+  -ms-flex: 0 1 auto;
+  -webkit-flex-shrink: 1;
+          flex-shrink: 1;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  /*margin-bottom:0.5rem;*/
+}
+.item-info { margin-left:1.0rem;}
+.lc-select { line-height:2.2rem;}
+
+header .bar.bar-nav {
+  background: -webkit-linear-gradient(left, #004b9a , #00aede); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #004b9a, #00aede); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #004b9a, #00aede); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #004b9a , #00aede); /* 标准的语法 */
+} 
+.panel-left {
+  background: -webkit-linear-gradient(top, #003277 , #00cfd9); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(bottom, #003277, #00cfd9); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(bottom, #003277, #00cfd9); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to bottom, #003277 , #00cfd9); /* 标准的语法 */
+  color:#FFFFFF;
+} 
+.title {
+  color: #FFFFFF;
+}
+.list-block .item-subtitle {
+  font-size: 0.65rem;
+  color: #8D8D8D;
+  margin-top:0.25rem;
+}
+.list-block .item-text {
+  font-size: 0.65rem;
+  color: #8D8D8D;
+}
+
+.bar:after,
+.bar-footer:before,
+.bar-footer-secondary:before,
+.bar-footer-secondary-tab:before,
+.bar-tab:before,
+.list-block ul:before,
+.list-block ul:after,
+.list-block .item-inner:after,
+.list-block .item-link.list-button:after,
+.list-block .item-divider:before,
+.list-block .list-group-title:before,
+.list-block li li:last-child .item-inner:after,
+.list-block li:last-child li .item-inner:after {
+	background-color: #c7c8cc;
+}
+
+.mt-first { margin-top:3.0rem}
+
+.bar .tabarea { margin:0.4rem 0;}
+.bar .tabarea .button { top:0;}
+
+
+/*************************/
+.fixed-add { position:fixed; right:1.5rem; bottom:3.0rem; z-index:10000;}
+.fixed-add .icon { font-size:2.8rem; color:#38b7ea}
+
+
+/*************silde***********/
+.theme-dark .silde, .silde.theme-dark { color:#FDFDFD; font-size:0.8rem;
+}
+.theme-dark .silde a, .silde.theme-dark a { color:#FDFDFD; font-size:0.8rem;
+}
+.list-block .item-after { text-align:left}
+
+
+.border-o { border:solid 1px #c7c8cc;}
+.content-min { min-height:5.0rem; padding:0.8rem 0.4rem;}
+
+.user-block { margin:1.00rem 0;}
+.user-area {
+	background: -webkit-linear-gradient(left, #004b9a , #00aede); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #004b9a, #00aede); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #004b9a, #00aede); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #004b9a , #00aede); /* 标准的语法 */
+  padding-bottom:0.2rem;
+	}
+.user-img, .user-area .user-img { text-align:center; display: block; }
+.user-img img, .user-area .user-img img { width: 4rem; height:4rem;}
+.user-name, .user-area .user-name { text-align:center; display: block; font-size:0.8rem}
+.img-circle { 
+width: 4rem; 
+height: 4rem; 
+border-radius: 4rem; 
+-moz-border-radius:4rem;
+-webkit-border-radius: 4rem; 
+border: solid 5px rgba(255,255,255,0.4);
+-moz-background-clip: border; /* Firefox 3.6 */    
+-webkit-background-clip: border; /* Safari 4? Chrome 6? */    
+background-clip: border-box; /* Firefox 4, Safari 5, Opera 10, IE 9 */    
+-moz-background-clip: padding; /* Firefox 3.6 */    
+-webkit-background-clip: padding; /* Safari 4? Chrome 6? */    
+background-clip: padding-box; /* Firefox 4, Safari 5, Opera 10, IE 9 */    
+-moz-background-clip: content; /* Firefox 3.6 */    
+-webkit-background-clip: content; /* Safari 4? Chrome 6? */    
+background-clip: content-box; /* Firefox 4, Safari 5, Opera 10, IE 9 */ 
+} 
+.list-block {margin:0.85rem 0;}
+.content-block-title {margin:0.85rem 0.75rem 0.5rem}
+
+.max-button { height:2.0rem; line-height:2.0rem;}
+.max-button.button-fill {height:2.0rem; line-height:2.0rem;}
+
+.bar-nobg::after { background: -webkit-linear-gradient(left, #004b9a , #00aede); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #004b9a, #00aede); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #004b9a, #00aede); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #004b9a , #00aede); /* 标准的语法 */}
+ 
+.silde .icon { color:rgba(255,255,255,0.5); margin-right:0.2rem }
+.f24 { font-size:1.75rem}
+.f18 { font-size:1.0rem; width:1.0rem; height:1.0rem; display:inline-block; margin-right:0.8rem;}
+.f18:after { margin-right:0.2rem;}
+/*******通讯录********/
+.address-img { font-size:1.75rem; color:#C5C5C5}
+.address-img, .address-img img { 
+	width: 2.4rem; 
+	height: 2.4rem; 
+	border-radius: 2.4rem; 
+	-moz-border-radius:2.4rem;
+	-webkit-border-radius: 2.4rem; 
+}
+.conbar { z-index:205;}
+.conbar::after { z-index:205;}

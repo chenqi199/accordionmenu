@@ -2,105 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77b53f65-ea1e-4fef-8bfb-d1493e35157c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/首页.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bibao/bibaodemo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqi_homepage/homepage_js/homepage_main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqi_homepage/homepage_js/navi_homepage_defultmenu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqi_homepage/homepage_js/navi_module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqi_homepage/homepage_js/nvai_homepage_modulemanage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqi_homepage/navi_homepage_config_menu.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqi_homepage/navi_homepage_modulemanage_tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqi_homepage/navi_homepagedefultmenu.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqi_homepage/navi_module_zs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqi_homepage/newhomepage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqi_zs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chenqitestindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chqi_modulemanager.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/SpryAccordion1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/chenqi_homepage/chenqi_homepage_main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/main0.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/moduletree.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/daiban.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dirtree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domonohomepage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bangong_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/form_btn_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/form_btn_02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/form_btn_03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/head_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icon_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icon_page.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/left_menuBG.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/left_menuBG2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/left_mune.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/left_munebg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/left_munebg02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/menu_line.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/menu_line_obj.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mune.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mune02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/nav.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/qicao.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/qicao02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/qicao_wd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/qicao_wd02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/tab_bg2_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/tab_bg2_02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/tab_bg2_03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/tab_bg_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/tab_bg_02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/tab_bg_03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/tongxunlu_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/top_gongju.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/CommonFunction.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/SpryAccordion.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/common.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/initializers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery-1.9.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.tabslet.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/json2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ziliao.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jsextends/copyextends.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jsextends/instanceextends.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jsextends/jishengextends.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jsextends/jsconstrateextends.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jsextends/jsextends.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jsextends/jszuheextends.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/LICENSE-MIT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/jstree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/jstree.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default-dark/32px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default-dark/40px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default-dark/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default-dark/style.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default-dark/throbber.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default/32px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default/32px_line.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default/32px_original.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default/40px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default/style.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/dist/themes/default/throbber.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jstree/jstree.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/newtree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdoc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/1111.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/treegetajaxres.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/fonts/mui.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/fonts/iconfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/fonts/iconfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/fonts/iconfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/img/20160610214538_kRMec.thumb.700_0.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/img/QQ截图20161229143629.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/Selary.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/css/mui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/css/mui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/input.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/scripts/mui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/scripts/mui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/scripts/mui.pullToRefresh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Selary/scripts/mui.pullToRefresh.material.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/add.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/crm.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/css/oa-style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/css/sm-extend.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/css/sm-extend.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/css/sm.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/css/sm.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/js/calendar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/js/sm-city-picker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/js/sm-city-picker.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/js/sm-extend.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/js/sm-extend.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/js/sm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/dist/js/sm.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/fonts/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/fonts/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/fonts/iconfont.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/fonts/iconfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/js/crm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/js/zepto.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/js/zepto.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nongfahomepage/nongfahomepage.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="首页.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,7 +75,18 @@
     <favorites_list name="首页" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="mui.min.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Selary/css/mui.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -158,6 +116,13 @@
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="34" />
@@ -269,7 +234,89 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nongfahomepage" />
+              <option name="myItemId" value="Selary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="首页" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accordionmenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Selary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unpackage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="首页" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accordionmenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Selary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="首页" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accordionmenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Selary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="首页" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accordionmenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="首页" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accordionmenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -282,10 +329,13 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Selary/.project" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -608,6 +658,18 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -720,7 +782,7 @@
       <workItem from="1487925962831" duration="903000" />
       <workItem from="1487927665630" duration="1535000" />
       <workItem from="1488157501433" duration="25766000" />
-      <workItem from="1491660690277" duration="338000" />
+      <workItem from="1491660690277" duration="912000" />
     </task>
     <task id="LOCAL-00001" summary="手风琴菜单&#10;1：单击事件&#10;2：关闭兄弟节点">
       <created>1488166280992</created>
@@ -752,11 +814,23 @@
       <option name="project" value="LOCAL" />
       <updated>1488190524603</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修改图标">
+      <created>1491661032340</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1491661032340</updated>
+    </task>
+    <task id="LOCAL-00007" summary="修改图标">
+      <created>1491661074377</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1491661074377</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46296000" />
+    <option name="totallyTimeSpent" value="46870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="34" y="0" width="1300" height="820" extended-state="0" />
@@ -764,20 +838,20 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4417549" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14169382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24592833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44186047" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -813,95 +887,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="23" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chenqitestindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="548" column="54" selection-start-line="548" selection-start-column="46" selection-end-line="548" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chenqitestindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="548" column="54" selection-start-line="548" selection-start-column="46" selection-end-line="548" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chenqitestindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chenqitestindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="548" column="54" selection-start-line="548" selection-start-column="46" selection-end-line="548" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/Selary/css/mui.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -909,163 +895,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chenqitestindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chenqitestindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="548" column="54" selection-start-line="548" selection-start-column="46" selection-end-line="548" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chenqitestindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="548" column="54" selection-start-line="548" selection-start-column="46" selection-end-line="548" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chenqitestindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="548" column="54" selection-start-line="548" selection-start-column="46" selection-end-line="548" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="24.951096">
-          <caret line="548" column="54" selection-start-line="548" selection-start-column="46" selection-end-line="548" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jstree/dist/jstree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="636" column="51" selection-start-line="636" selection-start-column="41" selection-end-line="636" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chenqitestindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0455312">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.961214">
-          <caret line="87" column="23" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jstree/dist/themes/default/32px_original.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jstree/dist/themes/default/32px_line.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jstree/dist/themes/default/32px.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Selary</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
